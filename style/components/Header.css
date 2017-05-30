@@ -1,0 +1,17 @@
+
+.headerContainer {
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.listContainer {
+    color: blue;
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+}
+
+.listContainer li {
+    display: inline;
+}
