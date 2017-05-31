@@ -1,19 +1,25 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import style from '../../style/components/Post.css';
 
 class Post extends Component {
 
     render() {
         return (
-            <div>
-                <div>
-                    <div>Username</div>
-                    <div>date</div>
-                    <div>school</div>
+            <div className={style.postsContainer}>
+                <div className={style.metaContainer}>
+                    <div>
+                        <div>{this.props.username}</div>
+                        <div>{this.props.date}</div>
+                        <div>{this.props.school}</div>
+                    </div>
+                    <div className={style.postContainer}>
+                        <p>{this.props.post}</p>
+                    </div>
+                    <div className={style.upvoteContainer}>
+                        <span>upvote {this.props.upvote}</span>
+                    </div>
                 </div>
-                <div>
-                    <p>post</p>
-                </div>
-                <div>upvote</div>
             </div>
         )
     }
@@ -27,4 +33,4 @@ Post.prototypes = {
     upvote: PropTypes.string.isRequired
 }
 
-export default React
+export default Post
