@@ -16,6 +16,7 @@ class Header extends Component {
                             <Link to="/">Jobs</Link>
                             <Link to="/">Resource</Link>
                             <Link to="/">Ranking</Link>
+                            <Link to="/newPost">Post</Link>
                         </div>
                     </div>
                     <div className={style.access}>

@@ -9,6 +9,7 @@ import SignIn from './components/Authentication/Signin';
 import Signup from './components/Authentication/Signup';
 import Main from './components/Main';
 import Header from './components/Header';
+import CreatePost from './components/CreatePost';
 
 import reducers from './reducers';
 
@@ -23,6 +24,7 @@ ReactDom.render(
                 <Switch>
                     <Route path="/signin" component={SignIn} />
                     <Route path="/signup" component={Signup} />
+                    <Route path="/newpost" component={CreatePost} />
                     <Route path="/" component={Main} />
                 </Switch>
             </div>

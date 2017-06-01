@@ -1,0 +1,60 @@
+.mainContainer {
+    margin-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.header {
+    width: 800px;
+    margin: 20px auto;
+    color: #0366D6;
+}
+
+.formContainer {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid #D7DEDA;
+    border-radius: 3px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.field {
+    width: 80%;
+    height: 40px;
+    border: 1px solid #D7DEDA;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.textArea {
+    max-width: 80%;
+    max-height: 280px;
+    width: 80%;
+    height: 150px;
+    border: 1px solid #D7DEDA;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.submitBtn {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #D7DEDA;
+    border-radius: 3px;
+    background: #0366D6;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.cancelBtn {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #D7DEDA;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 15px;
+}
