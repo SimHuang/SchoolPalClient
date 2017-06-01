@@ -40,7 +40,7 @@
 }
 
 .submitBtn {
-    width: 100px;
+    width: 120px;
     height: 50px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
@@ -51,7 +51,7 @@
 }
 
 .cancelBtn {
-    width: 100px;
+    width: 120px;
     height: 50px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
