@@ -7,14 +7,25 @@ class Header extends Component {
     render() {
         return (
             <div className={style.headerContainer}>
-                <div>
-                    <Link to="/">Home</Link>
-                </div>
-                <div>
-                    <Link to="/signin">Sign In</Link>
-                </div>
-                <div>
-                    <Link to="/signup">Sign Up</Link>
+                <div className={style.linkContainer}>
+                    <div className={style.links}>
+                        <div>
+                            <Link to="/">Questions</Link>
+                            <Link to="/">Schools</Link>
+                            <Link to="/">News</Link>
+                            <Link to="/">Jobs</Link>
+                            <Link to="/">Resource</Link>
+                            <Link to="/">Ranking</Link>
+                        </div>
+                    </div>
+                    <div className={style.access}>
+                        <div className={style.signin}>
+                            <Link to="/signin">Sign In</Link>
+                        </div>
+                        <div className={style.signup}>
+                            <Link to="/signup">Sign Up</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

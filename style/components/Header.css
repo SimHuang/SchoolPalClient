@@ -1,7 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-    background: #E9EBEE;
+    /*background: #E9EBEE;*/
+    background: #fff;
 }
 
 .headerContainer {
@@ -11,16 +12,84 @@ body {
     height: 50px;
     text-decoration: none;
     margin-bottom: 100px;
-    background: #2E6DC2;
+    border-bottom: 1px solid #0366D6;
+    -webkit-box-shadow: 0px 0px 4px 1px #0366D6;
+    -moz-box-shadow: 0px 0px 4px 1px #0366D6;
+    box-shadow: 0px 0px 4px 1px #0366D6;
+    background: #fff;
+    /*background: #0366D6;*/
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
+    display: flex;
+    align-items: center;
 }
 
-.headerContainer div {
-    width: 70px;
-    float: left;
+.linkContainer {
+    width: 75%;
+    margin: 0 auto;
+}
+
+/*.linkContainer div {
+    display: inline-block;
+    height: 50px;
+}*/
+
+.links {
+    display: inline;
+    position: relative;
+}
+
+.links a {
+    color: #0366D6;
+    margin-right: 17px;
+}
+
+.links div {
+    display: inline;
+    position: absolute;
+    top:50%;
+}
+
+.access {
+    float: right;
+}
+
+.access div {
+    display: inline;
 }
 
 .headerContainer a {
     text-decoration: none;
 }
+
+.signin {
+    border: 1px solid #0366D6;
+    border-radius: 3px;
+    padding: 8px;
+    text-align: center;
+}
+
+.access a {
+    margin-right: 10px;
+}
+
+.signin a {
+    color: #0366D6;
+    margin: auto 0;
+}
+
+.signup {
+    border: 1px solid #0366D6;
+    border-radius: 3px;
+    padding: 8px;
+    margin-left: 5px;
+    text-align: center;
+    background: #0366D6;
+}
+
+.signup a {
+    color: #fff;
+    margin: auto 0;
+}
+
+
