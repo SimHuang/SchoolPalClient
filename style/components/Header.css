@@ -16,7 +16,7 @@ body {
     -webkit-box-shadow: 0px 0px 4px 1px #0366D6;
     -moz-box-shadow: 0px 0px 4px 1px #0366D6;
     box-shadow: 0px 0px 4px 1px #0366D6;
-    background: #fff;
+    background: #0366D6;
     /*background: #0366D6;*/
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
@@ -40,7 +40,7 @@ body {
 }
 
 .links a {
-    color: #0366D6;
+    color: #fff;
     margin-right: 17px;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .signin {
-    border: 1px solid #0366D6;
+    /*border: 1px solid #28AF67;*/
     border-radius: 3px;
     padding: 8px;
     text-align: center;
@@ -74,17 +74,17 @@ body {
 }
 
 .signin a {
-    color: #0366D6;
+    color: #E9EBEE;
     margin: auto 0;
 }
 
 .signup {
-    border: 1px solid #0366D6;
+    border: 1px solid #fff;
     border-radius: 3px;
     padding: 8px;
     margin-left: 5px;
     text-align: center;
-    background: #0366D6;
+    /*background: #28AF67;*/
 }
 
 .signup a {
