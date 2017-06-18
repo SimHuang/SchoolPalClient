@@ -3,8 +3,25 @@ import style from '../../../style/components/SignUp.css';
 import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
-class Signup extends Component {
+//component to render in the component props
+const renderField = ({
+  input,
+  label,
+  type,
+  meta: { touched, error, warning }
+}) => {
+    return (
+        <div>
+            <div>
+                <input className={style.field} {...input} placeholder={label} type={type} />
+                {touched &&
+                ((error && <div className={style.error}>{error}</div>) || (warning && <div>{warning}</div>))}
+            </div>
+        </div>
+    );
+}
 
+class Signup extends Component {
     constructor(props) {
         super(props);
 
@@ -25,42 +42,43 @@ class Signup extends Component {
                     <Field 
                         className={style.field} 
                         name="email" 
-                        component="input" 
+                        component={renderField} 
                         type="text" 
-                        placeholder=" Email"
+                        label=" Email"
                     />
-                    <br/><br/>
+                    <br/>
                     <Field 
                         className={style.field} 
-                        name="name" component="input" 
+                        name="name" 
+                        component={renderField}
                         type="text" 
-                        placeholder=" Full Name"
+                        label=" Full Name"
                     />
-                    <br/><br/>
+                    <br/>
                     <Field 
                         className={style.field} 
                         name="username" 
-                        component="input" 
+                        component={renderField} 
                         type="text" 
-                        placeholder=" Username"
+                        label=" Username"
                     />
-                    <br/><br/>
+                    <br/>
                     <Field 
                         className={style.field} 
                         name="password" 
-                        component="input" 
+                        component={renderField} 
                         type="password"
-                        placeholder=" Password" 
+                        label=" Password" 
                     />
-                    <br/><br/>
+                    <br/>
                     <Field 
                         className={style.field} 
                         name="passwordagain" 
-                        component="input" 
+                        component={renderField} 
                         type="password" 
-                        placeholder=" Enter Password Again" 
+                        label=" Enter Password Again" 
                     />
-                    <br/><br/>
+                    <br/>
                     <button className={style.submitBtn} type="submit">Create Account</button>
                     <button className={style.cancelBtn} >Cancel</button>
                 </form>
@@ -69,6 +87,33 @@ class Signup extends Component {
     }
 }
 
+//function used to validate the redux form
+const validate = values => {
+    const error = {};
+    if(!values.email) {
+        error.email = 'Required';
+    }else if(!values.email.includes('@')) {
+        error.email = 'Please enter a proper email!';
+    }
+
+    if(!values.name) {
+        error.name = 'Required';
+    }
+
+    if(!values.password) {
+        error.password = 'Required';
+    }
+
+    if(!values.passwordagain) {
+        error.passwordagain = 'Required';
+    }else if(values.passwordagain !== values.password) {
+        error.passwordagain = 'Passwords do not match!'
+    }
+
+    return error;
+} 
+
 export default reduxForm({
-    form:'signup'
+    form:'signupAccount',
+    validate
 })(Signup)
