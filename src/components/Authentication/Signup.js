@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import style from '../../../style/components/SignUp.css';
 import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
+import * as actions from '../../actions/auth';
 
 //component to render in the component props
 const renderField = ({
@@ -29,16 +30,20 @@ class Signup extends Component {
         this.handleSignUp = this.handleSignUp.bind(this);
     }
 
-    handleSignUp(event) {
-        event.preventDefault();
-        console.log(event);
+    //the object containing the form data is passed through by redux form
+    handleSignUp(formProps) {
+        console.log(formProps);
+        // event.preventDefault();
+        // console.log(event);
+        this.props.signUpUser(formProps);
     }
 
     render() {
+        const { handleSubmit } = this.props; 
         return (
             <div className={style.mainContainer}>
                 <h3>Create Account</h3>
-                <form onSubmit={this.handleSignUp}>
+                <form onSubmit={handleSubmit(this.handleSignUp)}>
                     <Field 
                         className={style.field} 
                         name="email" 
@@ -113,7 +118,13 @@ const validate = values => {
     return error;
 } 
 
-export default reduxForm({
+function mapStateToProps(state) {
+    return { errorMessage: state.auth.error};
+}
+
+const signupForm =  reduxForm({
     form:'signupAccount',
     validate
 })(Signup)
+
+export default connect(mapStateToProps, actions)(signupForm);

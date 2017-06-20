@@ -1,4 +1,9 @@
-import { FETCH_POST } from './types';
+import axios from 'axios';
+
+import { AUTH_USER, FETCH_POST } from './types';
+
+const root_url = 'http://localhost:3000';
+
 
 /**
  * action to fetch all posts from database
