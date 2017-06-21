@@ -16,10 +16,12 @@ class Header extends Component {
                             <Link to="/">Jobs</Link>
                             <Link to="/">Resource</Link>
                             <Link to="/">Ranking</Link>
-                            <Link to="/newPost">Post</Link>
                         </div>
                     </div>
                     <div className={style.access}>
+                        <div className={style.newPost}>
+                            <Link to="/newPost">Ask Question</Link>
+                        </div>
                         <div className={style.signin}>
                             <Link to="/signin">Sign In</Link>
                         </div>

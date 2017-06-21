@@ -1,8 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-    background: #E9EBEE;
-    /*background: #fff;*/
+    /*background: #E9EBEE;*/
+    background: #fff;
 }
 
 .headerContainer {
@@ -90,6 +90,20 @@ body {
 .signup a {
     color: #fff;
     margin: auto 0;
+}
+
+.newPost {
+    cursor: pointer;
+    color: #fff;
+    padding: 8px;
+}
+
+.newPost a {
+    color: #fff;
+}
+
+.newPost a:hover {
+    color: #28AF67;
 }
 
 
