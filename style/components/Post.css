@@ -16,6 +16,9 @@
 
 .postContainer {
     padding: 10px;
+    border: 1px solid #D7DEDA;
+    width: 100%;
+
 }
 
 .upvoteContainer {

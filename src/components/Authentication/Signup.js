@@ -32,10 +32,10 @@ class Signup extends Component {
 
     //the object containing the form data is passed through by redux form
     handleSignUp(formProps) {
-        console.log(formProps);
         // event.preventDefault();
         // console.log(event);
         this.props.signUpUser(formProps);
+        console.log(this.props.auth);
     }
 
     render() {
@@ -118,8 +118,10 @@ const validate = values => {
     return error;
 } 
 
+//returns a piece of state to component as props
 function mapStateToProps(state) {
-    return { errorMessage: state.auth.error};
+    // return { errorMessage: state.auth.error};
+    return { auth: state.auth }
 }
 
 const signupForm =  reduxForm({

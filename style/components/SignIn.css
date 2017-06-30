@@ -31,3 +31,7 @@
     background: #fff;
     font-size: 15px;
 }
+
+.error {
+    color: red;
+}
