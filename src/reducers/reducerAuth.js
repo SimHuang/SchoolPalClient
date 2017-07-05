@@ -5,7 +5,7 @@ export default function(state = {}, action) {
         case AUTH_USER:
             return {...state, error: '', authenticated: true};
         case AUTH_ERROR:
-            return {...state, error: 'Error Creating Account penis', authenticated: false};
+            return {...state, error: action.response, authenticated: false};
             // return Object.assign({}, state, {error: 'Error creating account'});
         default: 
             return state;

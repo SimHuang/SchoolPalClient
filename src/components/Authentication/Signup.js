@@ -30,6 +30,10 @@ class Signup extends Component {
         this.handleSignUp = this.handleSignUp.bind(this);
     }
 
+    displayErrorMessage() {
+        return 'chicken';
+    }
+
     //the object containing the form data is passed through by redux form
     handleSignUp(formProps) {
         // event.preventDefault();
@@ -39,7 +43,13 @@ class Signup extends Component {
 
     render() {
         // {console.log(this.props.auth)}
+        let errorMessage = null;
         const { handleSubmit } = this.props; 
+
+        if(!this.props.auth.authenticated && this.props.auth.error) {
+            errorMessage = <div>{this.props.auth.error.data.error}</div>
+        }
+
         return (
             <div className={style.mainContainer}>
                 <h3>Create Account</h3>
@@ -87,6 +97,7 @@ class Signup extends Component {
                     <button className={style.submitBtn} type="submit">Create Account</button>
                     <button className={style.cancelBtn} >Cancel</button>
                 </form>
+                {errorMessage}
             </div>
         )
     }
