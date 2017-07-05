@@ -35,10 +35,10 @@ class Signup extends Component {
         // event.preventDefault();
         // console.log(event);
         this.props.signUpUser(formProps);
-        console.log(this.props.auth);
     }
 
     render() {
+        // {console.log(this.props.auth)}
         const { handleSubmit } = this.props; 
         return (
             <div className={style.mainContainer}>
@@ -121,7 +121,10 @@ const validate = values => {
 //returns a piece of state to component as props
 function mapStateToProps(state) {
     // return { errorMessage: state.auth.error};
-    return { auth: state.auth }
+    console.log(state);
+    return { 
+        auth: state.auth
+     }
 }
 
 const signupForm =  reduxForm({

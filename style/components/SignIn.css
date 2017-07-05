@@ -35,3 +35,8 @@
 .error {
     color: red;
 }
+
+.label {
+    text-align: left;
+    float: left;
+}

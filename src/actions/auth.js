@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { SIGN_UP, AUTH_USER } from './types';
+import { SIGN_UP, AUTH_USER, AUTH_ERROR } from './types';
 
 const ROOT_URL = 'http://localhost:3000';
 
@@ -11,12 +11,11 @@ export function signUpUser(user) {
     return function(dispatch) {
         axios.post(`${ROOT_URL}/api/v1/signup`, user)
         .then(response => {
-            console.log('success');
             dispatch({type:AUTH_USER});
-            localStorage.setItem(response.data.token);
+            localStorage.setItem('token',response.data.token);
         })
         .catch(error => {
-            console.log(error);
+            dispatch({type:AUTH_ERROR});
         });
     }
 }
