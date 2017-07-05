@@ -47,7 +47,7 @@ class Signup extends Component {
         const { handleSubmit } = this.props; 
 
         if(!this.props.auth.authenticated && this.props.auth.error) {
-            errorMessage = <div>{this.props.auth.error.data.error}</div>
+            errorMessage = <div className={style.error}>{this.props.auth.error.data.error}</div>
         }
 
         return (
@@ -132,7 +132,6 @@ const validate = values => {
 //returns a piece of state to component as props
 function mapStateToProps(state) {
     // return { errorMessage: state.auth.error};
-    console.log(state);
     return { 
         auth: state.auth
      }

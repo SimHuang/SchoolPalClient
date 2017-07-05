@@ -25,6 +25,7 @@ body {
     color: #fff;
     font-size: 15px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .cancelBtn {
@@ -34,6 +35,7 @@ body {
     border-radius: 3px;
     background: #fff;
     font-size: 15px;
+    margin-bottom: 10px;
 }
 
 .error {
