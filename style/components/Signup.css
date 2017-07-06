@@ -28,6 +28,11 @@ body {
     margin-bottom: 10px;
 }
 
+.submitBtn:hover {
+    cursor: pointer;
+    background: #104b8e;
+}
+
 .cancelBtn {
     width: 160px;
     height: 50px;
@@ -36,6 +41,10 @@ body {
     background: #fff;
     font-size: 15px;
     margin-bottom: 10px;
+}
+
+.cancelBtn:hover {
+    cursor: pointer;
 }
 
 .error {
