@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import style from '../../../style/components/SignUp.css';
 import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
+
 import * as actions from '../../actions/auth';
+import style from '../../../style/components/SignUp.css';
+
 
 //component to render in the component props
 const renderField = ({
@@ -30,15 +33,11 @@ class Signup extends Component {
         this.handleSignUp = this.handleSignUp.bind(this);
     }
 
-    displayErrorMessage() {
-        return 'chicken';
-    }
-
     //the object containing the form data is passed through by redux form
     handleSignUp(formProps) {
-        // event.preventDefault();
-        // console.log(event);
-        this.props.signUpUser(formProps);
+        this.props.signUpUser(formProps, ()=> {
+            this.props.history.push('/');
+        });
     }
 
     render() {
