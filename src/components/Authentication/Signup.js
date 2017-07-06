@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import * as actions from '../../actions/auth';
 import style from '../../../style/components/SignUp.css';
@@ -94,7 +94,7 @@ class Signup extends Component {
                     />
                     <br/>
                     <button className={style.submitBtn} type="submit">Create Account</button>
-                    <button className={style.cancelBtn} >Cancel</button>
+                    <Link to="/"><button className={style.cancelBtn} >Cancel</button></Link>
                 </form>
                 {errorMessage}
             </div>

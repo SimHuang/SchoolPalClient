@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import * as actions from '../../actions/auth';
 import style from '../../../style/components/SignIn.css'
@@ -39,7 +40,7 @@ class SignIn extends Component {
                         <Field name="password" component={renderFields} type="password" placeholder="Password" />
                         <br/>
                         <button className={style.submitBtn} type="submit">Log In</button>
-                        <button className={style.cancelBtn} type="submit">Cancel</button>
+                        <Link to="/"><button className={style.cancelBtn}>Cancel</button></Link>
                     </form>
                 </div>
                 {loginError}
