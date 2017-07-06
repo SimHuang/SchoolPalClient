@@ -24,6 +24,10 @@ class SignIn extends Component {
 
     render() {
         const { handleSubmit } = this.props;
+        let loginError = '';
+        if(!this.props.auth.authenticated && this.props.auth.error) {
+            loginError = <div className={style.error}>Unauthorized. Try again!</div>
+        }
 
         return( 
             <div className={style.mainContainer}>
@@ -38,6 +42,7 @@ class SignIn extends Component {
                         <button className={style.cancelBtn} type="submit">Cancel</button>
                     </form>
                 </div>
+                {loginError}
             </div>
         );
     }
