@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import style from '../../../style/components/SignIn.css'
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+
+import * as actions from '../../actions/auth';
+import style from '../../../style/components/SignIn.css'
+
 
 class SignIn extends Component {
     constructor(props) {
@@ -13,7 +17,9 @@ class SignIn extends Component {
      * user passed in to the submit.
      */ 
     handleSignIn(values) {
-        console.log(values);
+        this.props.signInUser(values, () => {
+            this.props.history.push('/');
+        })
     }
 
     render() {
@@ -66,7 +72,9 @@ const validate = values => {
 
 //This function is called whenever their is an update to the redux store
 const mapStateToProps = (state) => {
-
+    return {
+        auth: state.auth
+    }
 }
 
 const signInForm = reduxForm({
@@ -74,4 +82,4 @@ const signInForm = reduxForm({
     validate
 })(SignIn)
 
-export default signInForm
+export default connect(mapStateToProps, actions)(signInForm);

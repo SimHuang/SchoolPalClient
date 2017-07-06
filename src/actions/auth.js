@@ -24,8 +24,21 @@ export function signUpUser(user, callback) {
 /**
  * Action creator to be called when user attempts to login with existing account
  */
-export function signInUser() {
-    
+export function signInUser({username, password}, callback) {
+    return function(dispatch) {
+        axios.post(`${ROOT_URL}/api/v1/signin`, {
+            email:username,
+            password
+        })
+        .then(response => {
+            dispatch({type:AUTH_USER});
+            localStorage.setItem('token',response.data.token);
+            callback();
+        })
+        .catch(error => {
+            dispatch({type:AUTH_ERROR, response: error.response});
+        });
+    }
 }
 
 /**
