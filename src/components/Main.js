@@ -13,7 +13,7 @@ class Main extends Component {
     }
 
     renderPosts() {
-        console.log(this.props.posts);
+        // console.log(this.props.posts);
         return this.props.posts.map((post,index)=> {
             return (
                 <Post 

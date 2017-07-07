@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { SIGN_UP, AUTH_USER, AUTH_ERROR } from './types';
+import { SIGN_UP, AUTH_USER, AUTH_ERROR, UNAUTH_USER } from './types';
 
 const ROOT_URL = 'http://localhost:3000';
 
@@ -45,5 +45,6 @@ export function signInUser({username, password}, callback) {
  * action creator to be called when user attempts to log out of application
  */
 export function signOutUser() {
-
+    localStorage.removeItem('token');
+    return {type:UNAUTH_USER};
 }

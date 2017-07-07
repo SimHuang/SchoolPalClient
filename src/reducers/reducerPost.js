@@ -1,4 +1,4 @@
-import { FETCH_POST } from '../actions';
+import { FETCH_POSTS } from '../actions';
 
 let post = [
         {username: 'sam', school: 'stony brook university', post:'sample post', date: '10/21/2016', upvotes:5},
@@ -21,7 +21,7 @@ let post = [
 
 export default function(state=post, action) {
     switch(action.type) {
-        case FETCH_POST:
+        case FETCH_POSTS:
             return {...state};
         
         default:

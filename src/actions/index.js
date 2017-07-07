@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { AUTH_USER, FETCH_POST } from './types';
+import { AUTH_USER, FETCH_POSTS, CREATE_POST } from './types';
 
 const root_url = 'http://localhost:3000';
 
@@ -10,7 +10,7 @@ const root_url = 'http://localhost:3000';
  */
 export function fetchPost() {
     return {
-        type: FETCH_POST,
+        type: FETCH_POSTS,
     };
 }
 

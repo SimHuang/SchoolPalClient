@@ -1,4 +1,4 @@
-import { AUTH_USER, AUTH_ERROR } from '../actions/types';
+import { AUTH_USER, AUTH_ERROR, UNAUTH_USER } from '../actions/types';
 
 export default function(state = {}, action) {
     switch(action.type) {
@@ -7,6 +7,8 @@ export default function(state = {}, action) {
         case AUTH_ERROR:
             return {...state, error: action.response, authenticated: false};
             // return Object.assign({}, state, {error: 'Error creating account'});
+        case UNAUTH_USER:
+            return {...state, message: 'user logged out', authenticated:false};
         default: 
             return state;
     }

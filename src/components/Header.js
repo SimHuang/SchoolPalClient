@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
-import * as actions from '../actions';
+import * as actions from '../actions/auth';
 import style from '../../style/components/Header.css';
 
 class Header extends Component {
@@ -14,6 +14,7 @@ class Header extends Component {
     }
 
     handleSignOut() {
+        this.props.signOutUser();
     }
 
     render() {
@@ -24,8 +25,8 @@ class Header extends Component {
                         : undefined; 
         
         let signInLink = this.props.auth.authenticated 
-                    ? <div className={style.signin}>
-                            <Link to="/" onClick={this.handleSignOut}>Sign Out</Link>
+                    ? <div onClick={this.handleSignOut} className={style.signin}>
+                            <Link to="/" >Sign Out</Link>
                         </div>
                     : <div className={style.signin}>
                             <Link to="/signin">Sign In</Link>
@@ -36,8 +37,6 @@ class Header extends Component {
                             <Link to="/signup">Sign Up</Link>
                         </div>
                     : undefined;
-
-        console.log(this.props.auth);
 
         return (
             <div className={style.headerContainer}>
@@ -69,4 +68,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(mapStateToProps, actions)(Header);
