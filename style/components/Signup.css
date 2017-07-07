@@ -26,6 +26,8 @@ body {
     font-size: 15px;
     margin-right: 10px;
     margin-bottom: 10px;
+    transition: background-color;
+    transition-duration: 1s;
 }
 
 .submitBtn:hover {

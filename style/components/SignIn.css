@@ -17,10 +17,12 @@
     height: 50px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
-    background: #23B96A;
+    background: #0366D6;
     color: #fff;
     font-size: 15px;
     margin-right: 10px;
+    transition: background-color;
+    transition-duration: 1s;
 }
 
 .submitBtn:hover {
