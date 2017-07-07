@@ -1,26 +1,53 @@
 .postsContainer {
     border: 1px solid #D7DEDA;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 2px;
     font-family: Arial, Helvetica, sans-serif;
-    width: 75%;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
     background: #fff;
+    font-size: 13px;
 }
 
 .metaContainer {
-    padding: 10px; 
-    display: inline-block;
+    margin: 5px 10px 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #D7DEDA;
+}
+
+.school {
+    color: #2857AF;
+    font-weight: bold;
 }
 
 .postContainer {
-    padding: 10px;
-    border: 1px solid #D7DEDA;
-    width: 100%;
-
+    /*border: 1px solid #D7DEDA;*/
+    width: 775px;
+    margin: 0 10px 3px 9px;
+    padding: 2px;
 }
 
 .upvoteContainer {
     padding: 10px;
 }
+
+.upvoteContainer span {
+    border: 1px solid #84D7A3;
+    border-radius: 2px;
+    color: #fff;
+    background: #84D7A3;
+    padding: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.topRightCorner {
+    float: right;
+    color: #9DA09E;
+}
+
+.topRightCorner span {
+    margin-left: 10px;
+}
+
