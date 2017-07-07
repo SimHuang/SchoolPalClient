@@ -9,16 +9,20 @@ class Post extends Component {
             <div className={style.postsContainer}>
                 <div className={style.metaContainer}>
                     <div>
-                        <div>{this.props.username}</div>
-                        <div>{this.props.date}</div>
-                        <div>{this.props.school}</div>
-                    </div>
-                    <div className={style.postContainer}>
-                        <p>{this.props.post}</p>
-                    </div>
-                    <div className={style.upvoteContainer}>
-                        <span>upvote {this.props.upvote}</span>
-                    </div>
+                        <span className={style.school}>{this.props.school}</span>
+                        <span className={style.topRightCorner}>
+                            <span>{this.props.username}</span>
+                            <span>{this.props.date}</span>
+                        </span>
+                    </div>    
+                </div>
+                <div className={style.postContainer}>
+                    <p>{this.props.post}</p>
+                </div>
+                <div className={style.upvoteContainer}>
+                    <span>votes {this.props.upvote}</span>
+                    <span>views {this.props.views}</span>
+                    <span>answers {this.props.answers}</span>
                 </div>
             </div>
         )
