@@ -1,7 +1,16 @@
 .mainContainer {
-    margin-top: 60px;
+    margin-top: 150px;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+}
+
+.mainContainer div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+
+h3 {
+    color: #22CB5B;
 }
 
 .field {
@@ -10,10 +19,17 @@
     border: 1px solid #D7DEDA;
     border-radius: 3px;
     font-size: 15px;
+    padding: 3px 10px;
+    font-size: 14px;
+}
+
+.field:focus {
+    outline: none;
+    border-color: #0366D6;
 }
 
 .submitBtn {
-    width: 120px;
+    width: 420px;
     height: 50px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
@@ -31,12 +47,17 @@
 }
 
 .cancelBtn {
-    width: 120px;
+    color: #0366D6;
+    text-decoration: underline;
+    margin-top: 10px;
+    font-size: 15px;
+    /*width: 120px;
     height: 50px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
     background: #fff;
     font-size: 15px;
+    margin-top: 10px;*/
 }
 
 .cancelBtn:hover {
@@ -44,8 +65,9 @@
 }
 
 .error {
-    color: red;
-    margin-top: 10px;
+    color: #d47d7d;
+    margin-top: 5px;
+    font-size: 13px;
 }
 
 .label {

@@ -27,7 +27,7 @@ class SignIn extends Component {
         const { handleSubmit } = this.props;
         let loginError = '';
         if(!this.props.auth.authenticated && this.props.auth.error) {
-            loginError = <div className={style.error}>Unauthorized. Try again!</div>
+            loginError = <div className={style.error}>Either the username or password is incorrect. Try again!</div>
         }
 
         return( 
@@ -35,15 +35,17 @@ class SignIn extends Component {
                 <div>
                     <h3>Sign In</h3>
                     <form onSubmit={handleSubmit(this.handleSignIn)}>
-                        <Field name="username" component={renderFields} type="username" placeholder="Username"/>
+                        <Field name="username" component={renderFields} type="username" label="Email"/>
                         <br/>
-                        <Field name="password" component={renderFields} type="password" placeholder="Password" />
+                        <Field name="password" component={renderFields} type="password" label="Password" />
                         <br/>
                         <button className={style.submitBtn} type="submit">Log In</button>
-                        <Link to="/"><button className={style.cancelBtn}>Cancel</button></Link>
+                        <br/>
+                        {loginError}
+                        {/* <Link to="/">Cancel</Link> */}
                     </form>
                 </div>
-                {loginError}
+                
             </div>
         );
     }
@@ -66,7 +68,7 @@ const renderFields = ({
 const validate = values => {
     const errors = {};
     if(!values.username) {
-        errors.username = "Username Required!";
+        errors.username = "Email Required!";
     }
 
     if(!values.password) {

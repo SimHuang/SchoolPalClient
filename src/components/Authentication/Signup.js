@@ -51,52 +51,54 @@ class Signup extends Component {
 
         return (
             <div className={style.mainContainer}>
-                <h3>Create Account</h3>
-                <form onSubmit={handleSubmit(this.handleSignUp)}>
-                    <Field 
-                        className={style.field} 
-                        name="email" 
-                        component={renderField} 
-                        type="text" 
-                        label=" Email"
-                    />
-                    <br/>
-                    <Field 
-                        className={style.field} 
-                        name="name" 
-                        component={renderField}
-                        type="text" 
-                        label=" Full Name"
-                    />
-                    <br/>
-                    <Field 
-                        className={style.field} 
-                        name="username" 
-                        component={renderField} 
-                        type="text" 
-                        label=" Username"
-                    />
-                    <br/>
-                    <Field 
-                        className={style.field} 
-                        name="password" 
-                        component={renderField} 
-                        type="password"
-                        label=" Password" 
-                    />
-                    <br/>
-                    <Field 
-                        className={style.field} 
-                        name="passwordagain" 
-                        component={renderField} 
-                        type="password" 
-                        label=" Enter Password Again" 
-                    />
-                    <br/>
-                    <button className={style.submitBtn} type="submit">Create Account</button>
-                    <Link to="/"><button className={style.cancelBtn} >Cancel</button></Link>
-                </form>
-                {errorMessage}
+                <div>
+                    <h3>Create Account</h3>
+                    <form onSubmit={handleSubmit(this.handleSignUp)}>
+                        <Field 
+                            className={style.field} 
+                            name="email" 
+                            component={renderField} 
+                            type="text" 
+                            label=" Email"
+                        />
+                        <br/>
+                        <Field 
+                            className={style.field} 
+                            name="name" 
+                            component={renderField}
+                            type="text" 
+                            label=" Full Name"
+                        />
+                        <br/>
+                        <Field 
+                            className={style.field} 
+                            name="username" 
+                            component={renderField} 
+                            type="text" 
+                            label=" Username"
+                        />
+                        <br/>
+                        <Field 
+                            className={style.field} 
+                            name="password" 
+                            component={renderField} 
+                            type="password"
+                            label=" Password" 
+                        />
+                        <br/>
+                        <Field 
+                            className={style.field} 
+                            name="passwordagain" 
+                            component={renderField} 
+                            type="password" 
+                            label=" Enter Password Again" 
+                        />
+                        <br/>
+                        <button className={style.submitBtn} type="submit">Create Account</button>
+                        {/* <Link to="/"><button className={style.cancelBtn} >Cancel</button></Link> */}
+                    </form>
+                    {errorMessage}
+                </div>
             </div>
         )
     }
@@ -113,6 +115,10 @@ const validate = values => {
 
     if(!values.name) {
         error.name = 'Required';
+    }
+
+    if(!values.username) {
+        error.username = 'Required';
     }
 
     if(!values.password) {
