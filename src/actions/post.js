@@ -1,6 +1,10 @@
-import { FETCH_POSTS, CREATE_POST } from '../actions/types';
+import axios from 'axios';
 
-let post = [
+import { CREATE_POST, FETCH_POSTS } from './types';
+
+const ROOT_URL = 'http://localhost:3000';
+
+let posts = [
         {username: 'sam', school: 'stony brook university', post:'sample post', date: '10/21/2016', upvotes:5},
         {username: 'Kelly', school: 'Carneige Mellon university', post:'Hello world', date: '05/21/2017', upvotes:32},
         {username: 'kevin', school: 'Binghamton university', post:'how do i get to school', date: '01/19/2016', upvotes:123},
@@ -19,19 +23,26 @@ let post = [
  
     ]
 
-export default function(state=[], action) {
-    switch(action.type) {
-        case FETCH_POSTS:
-            console.log(action.payload);
-            return action.payload;
-        
-        case CREATE_POST:
-            console.log('creating post');
-            return [
-                ...state
-            ]
-        
-        default:
-            return state;
+/**
+ * action to fetch all posts from database
+ */
+export function fetchPost() {
+    console.log('fetching all posts');
+    return {
+        type: FETCH_POSTS,
+        payload: posts
+    };
+}
+
+/**
+ * create a post
+ */
+export function createPost(post) {
+    console.log('Post in action:')
+    console.log(post);
+    posts.push(post);
+    return {
+        type: CREATE_POST,
+        payload: 'creeated'
     }
-} 
+}

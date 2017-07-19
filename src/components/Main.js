@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
+import * as actions from '../actions/post';
 import Post from './Post';
 import style from '../../style/components/main.css';
 
@@ -8,6 +8,7 @@ class Main extends Component {
 
     //retrieve all post before component is rendered
     componentWillMount() {
+        console.log('mountings');
         this.props.fetchPost();
         
     }
