@@ -12,7 +12,18 @@ class CreatePost extends Component {
 
     submitPost(values) {
         console.log(values);
-        this.props.createPost({username: 'simon', school: 'Syracuse University', post:'i have a 2.89 gpa', date: '07/15/2017', upvotes:200});
+        this.props.createPost(
+            {
+                username: 'simon', //how do i retrieve the current user
+                school: 'Syracuse University',
+                question: values.question,
+                post:values.detail, 
+                date: '07/15/2017', 
+                tags: values.tags,
+                upvotes:0, 
+                views:0, 
+                answers:0
+            });
         this.props.history.push('/');
     }
 
@@ -31,7 +42,7 @@ class CreatePost extends Component {
                         <Field className={style.field} name="tags" component="input" type="text" placeholder="tags"/>
                         <br />
                         <br />
-                        <Field className={style.textArea} name="Details" component="textarea" type="textarea" placeholder="Enter Details"/>
+                        <Field className={style.textArea} name="detail" component="textarea" type="textarea" placeholder="Enter Details"/>
                         <br />
                         <br />
                         <button type="submit" className={style.submitBtn}>Submit</button>
