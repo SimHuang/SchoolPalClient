@@ -8,18 +8,17 @@ class Main extends Component {
 
     //retrieve all post before component is rendered
     componentWillMount() {
-        console.log('mountings');
         this.props.fetchPost();
         
     }
 
     renderPosts() {
-        // console.log(this.props.posts);
         return this.props.posts.map((post,index)=> {
+            //TODO:pass in proper parameters
             return (
                 <Post 
                     key={index}
-                    username={post.username} 
+                    username={post.author} 
                     date={post.date} 
                     school={post.school} 
                     post={post.post} 
