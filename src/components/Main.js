@@ -14,7 +14,6 @@ class Main extends Component {
 
     renderPosts() {
         return this.props.posts.map((post,index)=> {
-            //TODO:pass in proper parameters
             return (
                 <Post 
                     key={index}

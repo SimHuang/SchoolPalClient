@@ -4,15 +4,23 @@ import style from '../../style/components/Post.css';
 
 class Post extends Component {
 
+    parseDate(){
+        let postDate = new Date(this.props.date);
+        // return `${postDate.getMonth()}-${postDate.getDay()}-${postDate.getFullYear()}`
+        return postDate.toDateString();
+    }
+
     render() {
+        let parsedDate = this.parseDate();
+
         return (
             <div className={style.postsContainer}>
                 <div className={style.metaContainer}>
                     <div>
-                        <span className={style.school}>{this.props.school}</span>
+                        <span className={style.username}>{this.props.username}</span>
                         <span className={style.topRightCorner}>
-                            <span>{this.props.username}</span>
-                            <span>{this.props.date}</span>
+                            {/* <span>{this.props.username}</span> */}
+                            <span>{parsedDate}</span>
                         </span>
                     </div>    
                 </div>
@@ -31,7 +39,7 @@ class Post extends Component {
 
 Post.prototypes = {
     username: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired, //passed in as ISO format
     post: PropTypes.string.isRequired,
     school: PropTypes.string,
     upvote: PropTypes.string.isRequired
