@@ -1,4 +1,4 @@
-import { FETCH_POSTS, CREATE_POST } from '../actions/types';
+import { FETCH_POSTS, CREATED_POST } from '../actions/types';
 
 export default function(state=[], action) {
     switch(action.type) {
@@ -6,8 +6,7 @@ export default function(state=[], action) {
             // console.log(action.response);
             return action.response;
         
-        case CREATE_POST:
-            console.log('creating post');
+        case CREATED_POST:
             return [
                 ...state
             ]

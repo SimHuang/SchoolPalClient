@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-import { CREATE_POST, FETCH_POSTS } from './types';
+import { CREATED_POST,
+         CREATING_POST, 
+         FETCH_POSTS } from './types';
 
 const ROOT_URL = 'http://localhost:3000';
 
@@ -16,7 +18,7 @@ export function fetchPost() {
             dispatch({type: FETCH_POSTS, response: response.data});
         })
         .catch(error => {
-            dispatch({type:'error'});
+            console.log(error);
         });
     }
 }
@@ -25,11 +27,30 @@ export function fetchPost() {
  * create a post
  */
 export function createPost(post) {
-    console.log('Post in action:')
-    console.log(post);
-    posts.push(post);
-    return {
-        type: CREATE_POST,
-        payload: 'creeated'
+    return function(dispatch) {
+        //DISPATCH CREATING
+        let token = localStorage.getItem('token');
+        dispatch({type: CREATING_POST});
+        console.log(post);
+        axios({
+            method: 'post',
+            url: `${ROOT_URL}/api/v1/post/new`,
+            data: {
+                question: post.question,
+                tags: post.tag,
+                author: 'Simon Huang',
+                post: post.post
+            },
+            headers: {
+                'Authorization': token,
+                'content-type': 'application/json'
+            }
+        })
+        .then(response => {
+            dispatch({type:CREATED_POST, payload: response.data});
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 }
