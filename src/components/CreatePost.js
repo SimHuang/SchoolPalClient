@@ -36,13 +36,16 @@ class CreatePost extends Component {
                 </div>
                 <div className={style.formContainer}>
                     <form onSubmit={handleSubmit(this.submitPost.bind(this))}>
-                        <Field className={style.field} name="question" component="input" type="text" placeholder="Enter Question"/>
+                        <Field className={style.field} name="question" component="input" type="text" placeholder="Ask Question"/>
+                        <br />
+                        <br />
+                        <Field className={style.field} name="school" component="input" type="text" placeholder="Select a school"/>
+                        <br />
+                        <br />
+                        <Field className={style.textArea} name="detail" component="textarea" type="textarea" placeholder="Add additional information..."/>
                         <br />
                         <br />
                         <Field className={style.field} name="tags" component="input" type="text" placeholder="tags"/>
-                        <br />
-                        <br />
-                        <Field className={style.textArea} name="detail" component="textarea" type="textarea" placeholder="Enter Details"/>
                         <br />
                         <br />
                         <button type="submit" className={style.submitBtn}>Submit</button>

@@ -14,12 +14,9 @@
     width: 800px;
     height: 500px;
     margin: 0 auto;
-    border: 1px solid #D7DEDA;
-    border-radius: 3px;
     padding-top: 50px;
     padding-left: 10px;
     padding-right: 10px;
-    background: #fff;
 }
 
 .field {
@@ -27,7 +24,13 @@
     height: 40px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.field:focus {
+    outline: none;
+    border-color: #0366D6;
 }
 
 .textArea {
@@ -37,12 +40,18 @@
     height: 150px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.textArea:focus {
+    outline: none;
+    border-color: #0366D6;
 }
 
 .submitBtn {
-    width: 120px;
-    height: 50px;
+    width: 200px;
+    height: 45px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
     background: #0366D6;
@@ -58,8 +67,8 @@
 }
 
 .cancelBtn {
-    width: 120px;
-    height: 50px;
+    width: 200px;
+    height: 45px;
     border: 1px solid #D7DEDA;
     border-radius: 3px;
     background: #fff;
