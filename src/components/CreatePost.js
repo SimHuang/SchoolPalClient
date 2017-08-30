@@ -15,7 +15,7 @@ class CreatePost extends Component {
         this.props.createPost(
             {
                 username: 'simon', //how do i retrieve the current user
-                school: value.school,
+                school: values.school,
                 question: values.question,
                 post:values.detail, 
                 date: '07/15/2017', 
@@ -23,8 +23,10 @@ class CreatePost extends Component {
                 upvotes:0, 
                 views:0, 
                 answers:0
+            }, () => {
+                //redirect to main page after post has been created successfully
+                this.props.history.push('/');
             });
-        this.props.history.push('/');
     }
 
     render() {

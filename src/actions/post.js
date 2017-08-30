@@ -26,7 +26,7 @@ export function fetchPost() {
 /**
  * create a post
  */
-export function createPost(post) {
+export function createPost(post, callback) {
     return function(dispatch) {
         //DISPATCH CREATING
         let token = localStorage.getItem('token');
@@ -49,6 +49,7 @@ export function createPost(post) {
         .then(response => {
             //TODO: API CALL TO GET USER INFO
             dispatch({type:CREATED_POST, payload: response.data});
+            callback();
         })
         .catch(error => {
             console.log(error);
