@@ -47,6 +47,7 @@ export function createPost(post) {
             }
         })
         .then(response => {
+            //TODO: API CALL TO GET USER INFO
             dispatch({type:CREATED_POST, payload: response.data});
         })
         .catch(error => {

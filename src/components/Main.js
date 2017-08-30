@@ -9,7 +9,6 @@ class Main extends Component {
     //retrieve all post before component is rendered
     componentWillMount() {
         this.props.fetchPost();
-        
     }
 
     renderPosts() {
@@ -21,10 +20,10 @@ class Main extends Component {
                     date={post.date} 
                     school={post.school} 
                     post={post.post} 
-                    upvote={post.upvotes}/>
+                    upvote={post.upvotes}
+                    question={post.question}/>
             );
-        })
-            
+        })   
     }
 
     render() {
@@ -35,10 +34,6 @@ class Main extends Component {
             
         );
     }
-}
-
-Main.prototypes = {
-
 }
 
 function mapStateToProps(state) {

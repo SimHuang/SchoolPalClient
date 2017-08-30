@@ -25,7 +25,7 @@ class Post extends Component {
                     </div>    
                 </div>
                 <div className={style.postContainer}>
-                    <p>{this.props.post}</p>
+                    <p>{this.props.question}</p>
                 </div>
                 <div className={style.upvoteContainer}>
                     <span>votes {this.props.upvote}</span>
@@ -42,7 +42,8 @@ Post.prototypes = {
     date: PropTypes.string.isRequired, //passed in as ISO format
     post: PropTypes.string.isRequired,
     school: PropTypes.string,
-    upvote: PropTypes.string.isRequired
+    upvote: PropTypes.string.isRequired,
+    question: PropTypes.string.isRequired
 }
 
 export default Post

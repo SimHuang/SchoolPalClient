@@ -15,7 +15,7 @@ class CreatePost extends Component {
         this.props.createPost(
             {
                 username: 'simon', //how do i retrieve the current user
-                school: 'Syracuse University',
+                school: value.school,
                 question: values.question,
                 post:values.detail, 
                 date: '07/15/2017', 
