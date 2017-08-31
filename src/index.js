@@ -11,6 +11,7 @@ import Signup from './components/Authentication/Signup';
 import Main from './components/Main';
 import Header from './components/Header';
 import CreatePost from './components/CreatePost';
+import PostThread from './components/PostThread';
 
 import reducers from './reducers';
 
@@ -23,6 +24,7 @@ ReactDom.render(
             <div>
                 <Header />
                 <Switch>
+                    <Route path="/post/:id" component={PostThread}/>
                     <Route path="/signin" component={SignIn} />
                     <Route path="/signup" component={Signup} />
                     <Route path="/newpost" component={CreatePost} />

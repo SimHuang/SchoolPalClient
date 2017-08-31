@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as actions from '../actions/post';
 import Post from './Post';
 import style from '../../style/components/main.css';
@@ -14,14 +15,19 @@ class Main extends Component {
     renderPosts() {
         return this.props.posts.map((post,index)=> {
             return (
-                <Post 
-                    key={index}
-                    username={post.author} 
-                    date={post.date} 
-                    school={post.school} 
-                    post={post.post} 
-                    upvote={post.upvotes}
-                    question={post.question}/>
+                <Link
+                    to={"/post/"+ post._id}
+                    key={post._id}
+                >
+                    <Post 
+                        key={post._id}
+                        username={post.author} 
+                        date={post.date} 
+                        school={post.school} 
+                        post={post.post} 
+                        upvote={post.upvotes}
+                        question={post.question}/>
+                </Link>
             );
         })   
     }
