@@ -27,7 +27,7 @@ class Main extends Component {
                         post={post.post} 
                         upvote={post.upvotes}
                         question={post.question}/>
-                </Link>
+                 </Link>
             );
         })   
     }
