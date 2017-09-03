@@ -18,10 +18,24 @@ class PostThread extends Component {
     }
 
     render() {
-        console.log(this.props.posts);        
+        //return loading if data is not returned
+        if(!this.props.selectedPost.selected) {
+            return (
+                <div className={style.postThreadContainer}>
+                    <div>loading selected post...</div>
+                </div>
+            )
+        }
+
+        let selectedPost = this.props.selectedPost.selected;   
+        console.log(selectedPost);  
         return(    
             <div className={style.postThreadContainer}>
-                <div>{this.props.match.params.id}</div>
+                <div>{selectedPost.author}</div>
+                <div>{selectedPost.date}</div>
+                <div>{selectedPost.question}</div>
+                <div>{selectedPost.post}</div>
+                <div>{selectedPost.tags}</div>
             </div>
         );
         //POST
@@ -33,7 +47,7 @@ class PostThread extends Component {
 
 function mapStateToProps(state) {
     return {
-        posts: state.post
+        selectedPost: state.post
     };
 }
 

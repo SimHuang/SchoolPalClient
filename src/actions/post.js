@@ -16,7 +16,6 @@ export function fetchPost() {
             "limit": 20
         })
         .then(response => {
-            console.log(response.data);
             dispatch({type: FETCH_POSTS, response: response.data});
         })
         .catch(error => {
