@@ -44,11 +44,11 @@ class Header extends Component {
                     <div className={style.links}>
                         <div>
                             <Link to="/">Posts</Link>
-                            <Link to="/">Schools</Link>
+                            {/* <Link to="/">Schools</Link> */}
                             {/*<Link to="/">News</Link>*/}
-                            <Link to="/">Jobs</Link>
+                            {/* <Link to="/">Jobs</Link> */}
                             {/*<Link to="/">Resource</Link>*/}
-                            <Link to="/">Ranking</Link>
+                            {/* <Link to="/">Ranking</Link> */}
                         </div>
                     </div>
                     <div className={style.access}>

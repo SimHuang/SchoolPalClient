@@ -2,7 +2,8 @@ import axios from 'axios';
 
 import { CREATED_POST,
          CREATING_POST, 
-         FETCH_POSTS } from './types';
+         FETCH_POSTS,
+         FETCH_POST } from './types';
 
 const ROOT_URL = 'http://localhost:3000';
 
@@ -15,7 +16,28 @@ export function fetchPost() {
             "limit": 20
         })
         .then(response => {
+            console.log(response.data);
             dispatch({type: FETCH_POSTS, response: response.data});
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
+}
+
+/**
+ * fetch single post base on post id
+ */
+export function fetchSpecificPost(id) {
+    let token = localStorage.getItem('token');
+    return function(dispatch) {
+        axios.get(`${ROOT_URL}/api/v1/post/${id}`, {
+            headers: {
+                'Authorization': token
+            }
+        })
+        .then(response => {
+            dispatch({type: FETCH_POST, response: response.data});
         })
         .catch(error => {
             console.log(error);

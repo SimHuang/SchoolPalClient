@@ -16,7 +16,7 @@ class Main extends Component {
         return this.props.posts.map((post,index)=> {
             return (
                 <Link
-                    to={"/post/"+ post._id}
+                    to={`/post/${post._id}`}
                     key={post._id}
                 >
                     <Post 
@@ -27,12 +27,21 @@ class Main extends Component {
                         post={post.post} 
                         upvote={post.upvotes}
                         question={post.question}/>
-                 </Link>
+                </Link>
             );
         })   
     }
 
     render() {
+        if(!this.props.posts) {
+            return (
+                <div className={style.mainContainer}>
+                    <div>loading...</div>
+                </div> 
+            )
+                
+        }
+
         return (
             <div className={style.mainContainer}>
                 {this.renderPosts()}
@@ -43,7 +52,9 @@ class Main extends Component {
 }
 
 function mapStateToProps(state) {
-    return {posts: state.post}
+    return {
+        posts: state.post.posts
+    }
 }
 
 export default connect(mapStateToProps, actions)(Main)
