@@ -15,19 +15,20 @@ class Main extends Component {
     renderPosts() {
         return this.props.posts.map((post,index)=> {
             return (
-                <Link
-                    to={`/post/${post._id}`}
-                    key={post._id}
-                >
+                // <Link
+                //     to={`/post/${post._id}`}
+                //     key={post._id}
+                // >
                     <Post 
                         key={post._id}
+                        id={post._id}
                         username={post.author} 
                         date={post.date} 
                         school={post.school} 
                         post={post.post} 
                         upvote={post.upvotes}
                         question={post.question}/>
-                </Link>
+                // </Link>
             );
         })   
     }
