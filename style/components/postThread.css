@@ -6,13 +6,15 @@
 }
 
 .postDetailContainer {
-    height: 500px;
+    height: auto;
     width: 800px;
     border: 1px solid #D7DEDA;
     margin-left: auto;
     margin-right: auto;
-    margin-top:20px;
+    margin-top:10px;
+    margin-bottom: 20px;
     background:white;
+    padding: 10px 10px 10px 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
@@ -20,12 +22,36 @@
 .question {
     font-size: 20px;
     font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #154286;
 }
 
 .answerContainer {
-
+    border: 1px solid #D7DEDA;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    background: #FFF;
+    padding: 10px 10px 10px 10px;
 }
 
-.answer {
-    
+.postThreadActionContainer {
+    width: 820px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+.answerQuestionButton {
+    background: #0366D6;
+    border: 1px solid #0366D6;
+    border-radius: 2px;
+    color: #FFF;
+    font-size: 14px;
+    width: 200px;
+    height: 150px;
+    height: 40px;
+    cursor: pointer;
 }

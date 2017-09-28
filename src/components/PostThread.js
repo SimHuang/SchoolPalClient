@@ -26,6 +26,14 @@ class PostThread extends Component {
     }
 
     /**
+     * Display the answer component on the same page to allow user
+     * to answer question
+     */
+    displayAnswerComponent() {
+        console.log('I am writing an ansdwer');
+    }
+ 
+    /**
      * Create elements to contain all answers
      */
     renderAnswers() {
@@ -47,16 +55,21 @@ class PostThread extends Component {
         console.log(selectedPost);  
         return(    
             <div className={style.postThreadContainer}>
+                <div className={style.postThreadActionContainer}>
+                    <button className={style.answerQuestionButton}
+                            onClick={this.displayAnswerComponent.bind(this)}>Answer Question</button>
+                </div>
                 <div className={style.postDetailContainer}>
                     <div>
-                        <div>{selectedPost.author}</div>
-                        <div>{date}</div>
+                        <span>{selectedPost.author}</span>
+                        <span>{date}</span>
                     </div>
                     <div className={style.question}>{selectedPost.question}</div>
                     <div>{selectedPost.post}</div>
                     <div>{selectedPost.tags}</div>
                 </div>
                 <div className={style.answerContainer}>
+                    
                     dfgdjgdsifgjdfio
                 </div>
             </div>
