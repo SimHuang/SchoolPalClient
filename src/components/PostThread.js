@@ -68,9 +68,20 @@ class PostThread extends Component {
                     <div>{selectedPost.post}</div>
                     <div>{selectedPost.tags}</div>
                 </div>
-                <div className={style.answerContainer}>
-                    
-                    dfgdjgdsifgjdfio
+                <div className={style.answersContainer}>
+                    {/*TODO: RENDER ANSWER METHOD TO RENDER ALL ANSWERS  */}
+                    <div className={style.answer}>
+                        This is very difficult
+                    </div>
+                    <div className={style.answer}>
+                        Try applying to stony brook
+                    </div>
+                    <div className={style.answer}>
+                        It is very hard for you to get into school
+                    </div>
+                    <div className={style.answer}>
+                        This is very difficult
+                    </div>
                 </div>
             </div>
         );
