@@ -22,7 +22,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .linkContainer {
@@ -43,7 +43,7 @@ body {
 }
 
 .links a {
-    color: #0366D6;
+    color: #a1a2a5;
     margin-right: 17px;
     transition: color .5s;
 }
@@ -82,12 +82,12 @@ body {
 }
 
 .signin a {
-    color: #28AF67;
+    color: #03a87c;
     margin: auto 0;
 }
 
 .signup a {
-    border: 1px solid #28AF67;
+    border: 1px solid #03a87c;
     border-radius: 3px;
     padding: 8px;
     margin-left: 5px;
@@ -95,11 +95,11 @@ body {
     transition: color,background-color;
     transition-duration: .5s;
     cursor: pointer;
-    color: #28AF67;
+    color: #03a87c;
 }
 
 .signup a:hover{
-    background: #28AF67;
+    background: #03a87c;
     color: #fff;
 }
 

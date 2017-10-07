@@ -43,8 +43,8 @@ class Header extends Component {
                 <div className={style.linkContainer}>
                     <div className={style.links}>
                         <div>
-                            <Link to="/">Posts</Link>
-                            {/* <Link to="/">Schools</Link> */}
+                            <Link to="/">Home</Link>
+                            <Link to="/">Questions</Link>
                             {/*<Link to="/">News</Link>*/}
                             {/* <Link to="/">Jobs</Link> */}
                             {/*<Link to="/">Resource</Link>*/}
