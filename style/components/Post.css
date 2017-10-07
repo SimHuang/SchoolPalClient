@@ -34,10 +34,10 @@
 }
 
 .upvoteContainer span {
-    border: 1px solid #84D7A3;
+    border: 1px solid #03a87c;
     border-radius: 2px;
-    color: #fff;
-    background: #84D7A3;
+    color: #03a87c;
+    /* background: #03a87c; */
     padding: 3px;
     font-size: 12px;
     margin-right: 5px;
