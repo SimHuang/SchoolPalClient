@@ -30,14 +30,30 @@ class PostThread extends Component {
      * to answer question
      */
     displayAnswerComponent() {
-        console.log('I am writing an ansdwer');
+        console.log('I am writing an answer');
     }
  
     /**
      * Create elements to contain all answers
      */
     renderAnswers() {
+        let postAnswers = this.props.selectedPost.selected.answers;
 
+        if(postAnswers.length === 0) {
+            return (
+                <div className={style.answerContainer}>Be the first to answer this question.</div>
+            )
+        }
+
+        return postAnswers.map((value, index) => {
+            return (
+                <div className={style.answerContainer} key={index}>
+                    <div className={style.meta}>{value.user}</div>
+                    <div className={style.meta}>{this.parseDate(value.date)}</div>
+                    <div className={style.answer}>{value.answer}</div>
+                </div>
+            )
+        })
     }
 
     render() {
@@ -45,14 +61,13 @@ class PostThread extends Component {
         if(!this.props.selectedPost.selected) {
             return (
                 <div className={style.postThreadContainer}>
-                    <div>loading selected post...</div>
+                    <div>loading...</div>
                 </div>
             )
         }
 
         let selectedPost = this.props.selectedPost.selected;   
         let date = this.parseDate(selectedPost.date);
-        console.log(selectedPost);  
         return(    
             <div className={style.postThreadContainer}>
                 <div className={style.postThreadActionContainer}>
@@ -61,34 +76,18 @@ class PostThread extends Component {
                 </div>
                 <div className={style.postDetailContainer}>
                     <div>
-                        <span>{selectedPost.author}</span>
-                        <span>{date}</span>
+                        <div className={style.meta}>{selectedPost.author}</div>
+                        <div className={style.meta}>{date}</div>
                     </div>
                     <div className={style.question}>{selectedPost.question}</div>
                     <div>{selectedPost.post}</div>
                     <div>{selectedPost.tags}</div>
                 </div>
                 <div className={style.answersContainer}>
-                    {/*TODO: RENDER ANSWER METHOD TO RENDER ALL ANSWERS  */}
-                    <div className={style.answer}>
-                        This is very difficult
-                    </div>
-                    <div className={style.answer}>
-                        Try applying to stony brook
-                    </div>
-                    <div className={style.answer}>
-                        It is very hard for you to get into school
-                    </div>
-                    <div className={style.answer}>
-                        This is very difficult
-                    </div>
+                    {this.renderAnswers()}
                 </div>
             </div>
         );
-        //POST
-
-        //COMMENT CONTAINER
-            //hold comments
     }
 }
 
