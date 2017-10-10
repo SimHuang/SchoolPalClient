@@ -13,3 +13,5 @@ export const CREATED_POST = 'create_post';
 export const CREATING_POST = 'creating_post';
 
 /*SINGLE POST RELATED ACTION TYPES*/
+export const PREPARE_ANSWER = 'prepare_answer';
+export const ANSWER_POST = 'answer_post';

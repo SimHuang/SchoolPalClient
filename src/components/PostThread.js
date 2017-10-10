@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions/post';
+import * as actions from '../actions/thread';
+import AnswerPost from './AnswerPost';
+
 
 import style from '../../style/components/postThread.css';
 
@@ -31,6 +33,15 @@ class PostThread extends Component {
      */
     displayAnswerComponent() {
         console.log('I am writing an answer');
+        let status = this.props.threadState.answer ? false : true;
+        this.props.toggleAnswerComponent(status);
+    }
+
+    /**
+     * Make sure answer component is no longer displayed when component unmounts
+     */
+    componentWillUnmount() {
+        this.props.toggleAnswerComponent(false);
     }
  
     /**
@@ -86,14 +97,17 @@ class PostThread extends Component {
                 <div className={style.answersContainer}>
                     {this.renderAnswers()}
                 </div>
+                {this.props.threadState.answer ? <AnswerPost /> : <span></span>}
             </div>
+            
         );
     }
 }
 
 function mapStateToProps(state) {
     return {
-        selectedPost: state.post
+        selectedPost: state.post,
+        threadState: state.thread
     };
 }
 
