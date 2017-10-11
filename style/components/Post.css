@@ -8,6 +8,8 @@
     margin-right: auto;
     background: #fff;
     font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .metaContainer {
@@ -47,6 +49,7 @@
     color: #999;
     margin-left: 5px;
     margin-right: 2px;
+    font-size: 12px;
 }
 
 .metaAction:hover {
