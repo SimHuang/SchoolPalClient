@@ -7,7 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     background: #fff;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .metaContainer {
@@ -33,14 +33,24 @@
     padding: 10px;
 }
 
-.upvoteContainer span {
-    border: 1px solid #03a87c;
+.meta {
+    border: 1px solid #2b6dad;
     border-radius: 2px;
-    color: #03a87c;
-    /* background: #03a87c; */
-    padding: 3px;
+    color: #2b6dad;
+    background: #f1f8fb;
+    padding: 4px;
     font-size: 12px;
     margin-right: 5px;
+}
+
+.metaAction {
+    color: #999;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.metaAction:hover {
+    text-decoration: underline;
 }
 
 .topRightCorner {

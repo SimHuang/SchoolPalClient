@@ -30,9 +30,11 @@ class Post extends Component {
                         <p>{this.props.question}</p>
                     </div>
                     <div className={style.upvoteContainer}>
-                        <span>votes {this.props.upvote}</span>
-                        <span>views {this.props.views}</span>
-                        <span>answers {this.props.answers}</span>
+                        <span className={style.meta}>Votes {this.props.upvote}</span>
+                        <span className={style.meta}>Views {this.props.views}</span>
+                        <span className={style.meta}>Answers {this.props.answers}</span>
+                        <span className={style.metaAction}>Follow</span>
+                        <span className={style.metaAction}>Downvote</span>
                     </div>
                 </Link>
             </div>
