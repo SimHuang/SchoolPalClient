@@ -5,13 +5,14 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import reduxThunk from 'redux-thunk';
 
-// import App from './components/App';
+import App from './components/App';
 import SignIn from './components/Authentication/Signin';
 import Signup from './components/Authentication/Signup';
 import Main from './components/Main';
 import Header from './components/Header';
 import CreatePost from './components/CreatePost';
 import PostThread from './components/PostThread';
+// import App from './components/App';
 
 import reducers from './reducers';
 
@@ -20,7 +21,7 @@ const store = createStorewithMiddleware(reducers);
 
 ReactDom.render(
     <Provider store={store}>
-        <BrowserRouter>
+        {/* <BrowserRouter>
             <div>
                 <Header />
                 <Switch>
@@ -30,7 +31,10 @@ ReactDom.render(
                     <Route path="/newpost" component={CreatePost} />
                     <Route path="/" component={Main} />
                 </Switch>
-            </div>
-        </BrowserRouter> 
+            </div> 
+            
+
+        </BrowserRouter> */}
+        <App/>
     </Provider>
     , document.getElementById('app'));
