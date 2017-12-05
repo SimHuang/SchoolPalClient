@@ -1,4 +1,4 @@
-import { PREPARE_ANSWER } from '../actions/types';
+import { PREPARE_ANSWER, ANSWER_QUESTION } from '../actions/types';
 
 let initialState = {
     answer: false
@@ -10,6 +10,9 @@ export default function(state=initialState, action) {
             console.log(action.payload);
             return {...state, answer: action.payload}
         
+        case ANSWER_QUESTION: 
+            return {...state, currentModal: action.payload}
+
         default:
             return state;
     }

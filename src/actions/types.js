@@ -12,6 +12,12 @@ export const FETCH_POST = 'fetch_post';
 export const CREATED_POST = 'create_post';
 export const CREATING_POST = 'creating_post';
 
+/*MODAL ACTION TYPES*/
+export const SHOW_MODAL = 'SHOW_MODAL';
+export const HIDE_MODAL = 'HIDE_MODAL';
+
 /*SINGLE POST RELATED ACTION TYPES*/
 export const PREPARE_ANSWER = 'prepare_answer';
-export const ANSWER_POST = 'answer_post';
+export const ANSWER_QUESTION = 'answer_question';
+
+

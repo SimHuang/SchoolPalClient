@@ -8,10 +8,13 @@ import Header from './Header';
 import CreatePost from './CreatePost';
 import PostThread from './PostThread';
 
+import ModalConductor from '../components/Modal/ModalConductor';
+
 
 const App = () => {
     return (
         <div>
+            {/*THE REST OF THE APPLICATION STORED UNDER REACT ROUTER*/}
             <BrowserRouter>
             <div>
                 <Header />
@@ -24,6 +27,9 @@ const App = () => {
                 </Switch>
                 </div>
             </BrowserRouter>
+
+            {/** All Modals on the root element**/}
+            <ModalConductor />
         </div>
     )
 }

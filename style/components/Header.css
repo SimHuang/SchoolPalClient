@@ -1,8 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-    background: #F5F9FF;
-    /*background: #fff;*/
+    background: rgb(250, 252, 255);
+    /* background: #fff; */
 }
 
 .headerContainer {

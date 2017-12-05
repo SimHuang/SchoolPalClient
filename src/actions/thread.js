@@ -1,7 +1,7 @@
 //this thread action is responsible for all actions when user clicks on a post
 import axios from 'axios';
 
-import {FETCH_POST, PREPARE_ANSWER} from './types';
+import {FETCH_POST, PREPARE_ANSWER, ANSWER_QUESTION, SHOW_MODAL} from './types';
 import {ROOT_URL} from '../../config.js';
 
 /**
@@ -33,5 +33,16 @@ export function fetchSpecificPost(id) {
         .catch(error => {
             console.log(error);
         });
+    }
+}
+
+/**
+ * return the type answer question to fetch answer
+ */
+export function fetchAnswerQuestionModal() {
+    console.log('showing answer question modal through action');
+    return {
+        type: SHOW_MODAL,
+        payload: 'SHOW_MODAL'
     }
 }

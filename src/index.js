@@ -12,7 +12,7 @@ import Main from './components/Main';
 import Header from './components/Header';
 import CreatePost from './components/CreatePost';
 import PostThread from './components/PostThread';
-// import App from './components/App';
+// import ModalConductor from './components/Modal/ModalConductor';
 
 import reducers from './reducers';
 
@@ -35,6 +35,9 @@ ReactDom.render(
             
 
         </BrowserRouter> */}
-        <App/>
+        <div>
+            <App/>
+            {/* <ModalConductor /> all modals that can be rendered */}
+        </div>
     </Provider>
     , document.getElementById('app'));

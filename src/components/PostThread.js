@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/thread';
-import AnswerPost from './AnswerPost';
+
+import ModalConductor from './Modal/ModalConductor';
+// import AnswerPost from './AnswerPost';
 
 
 import style from '../../style/components/postThread.css';
@@ -32,9 +34,11 @@ class PostThread extends Component {
      * to answer question
      */
     displayAnswerComponent() {
-        console.log('I am writing an answer');
-        let status = this.props.threadState.answer ? false : true;
-        this.props.toggleAnswerComponent(status);
+        // this.props.toggleAnswerComponent(true);
+        //display the modalConductor
+        console.log('answering component in post thread');
+        this.props.fetchAnswerQuestionModal();
+        // return <ModalConductor currentModal='ANSWER_QUESTION'/>;
     }
 
     /**
@@ -97,7 +101,6 @@ class PostThread extends Component {
                 <div className={style.answersContainer}>
                     {this.renderAnswers()}
                 </div>
-                {this.props.threadState.answer ? <AnswerPost /> : <span></span>}
             </div>
             
         );
