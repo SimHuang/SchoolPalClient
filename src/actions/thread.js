@@ -40,7 +40,6 @@ export function fetchSpecificPost(id) {
  * return the type answer question to fetch answer
  */
 export function fetchAnswerQuestionModal() {
-    console.log('showing answer question modal through action');
     return {
         type: SHOW_MODAL,
         payload: 'SHOW_MODAL'

@@ -8,6 +8,9 @@ export const showModal = (types, props) => ({
     }
 });
 
-export const hideModal = () => ({
-    type: HIDE_MODAL
-})
+//action to  unmount modal
+export const hideModal = () => {
+    return {
+        type: HIDE_MODAL
+    }
+}

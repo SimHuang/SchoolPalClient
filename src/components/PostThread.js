@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/thread';
 
 import ModalConductor from './Modal/ModalConductor';
-// import AnswerPost from './AnswerPost';
-
 
 import style from '../../style/components/postThread.css';
 
@@ -34,11 +32,7 @@ class PostThread extends Component {
      * to answer question
      */
     displayAnswerComponent() {
-        // this.props.toggleAnswerComponent(true);
-        //display the modalConductor
-        console.log('answering component in post thread');
         this.props.fetchAnswerQuestionModal();
-        // return <ModalConductor currentModal='ANSWER_QUESTION'/>;
     }
 
     /**
