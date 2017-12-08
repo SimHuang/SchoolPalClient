@@ -19,7 +19,10 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-form": "^6.7.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "semantic-ui": "^2.2.13",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
