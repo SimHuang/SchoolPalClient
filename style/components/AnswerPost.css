@@ -16,3 +16,11 @@
 .answerContainer {
     color: #fff;
 } */
+
+.answerPostTextArea {
+    margin-bottom: 10px;
+}
+
+.custom {
+    float: right;
+}
