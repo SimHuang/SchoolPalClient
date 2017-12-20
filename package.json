@@ -4,7 +4,7 @@
   "description": "client side for schoolpal 5/20/2017",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server -d --hot --config webpack.config.js --watch"
   },
   "author": "Simon Huang",
   "license": "ISC",
@@ -27,13 +27,14 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "css-loader": "^0.28.3",
+    "extract-text-webpack-plugin": "^3.0.2",
     "style-loader": "^0.18.1",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
