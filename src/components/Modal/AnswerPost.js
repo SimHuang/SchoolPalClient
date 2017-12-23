@@ -17,10 +17,6 @@ class AnswerPost extends Component {
         super(props);        
     }
 
-    componentWillUnmount() {
-        //make sure no data is left hanging
-    }
-
     render() {
         var answerPostClass = classNames(
             'ui',

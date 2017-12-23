@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
  * @param {*} modalComponent 
  */
 export const showModal = (modalComponent) => {
-    console.log('this is the component' + modalComponent);
     return {
         type:SHOW_MODAL,
         payload: {

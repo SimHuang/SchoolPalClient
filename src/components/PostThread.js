@@ -30,6 +30,13 @@ class PostThread extends Component {
     }
 
     /**
+     * Make sure all modals are unmounted when the parent component unmounts
+     */
+    componentWillUnmount() {
+        this.props.hideModal();
+    }
+
+    /**
      * Display the answer component on the same page to allow user
      * to answer question
      */

@@ -4,10 +4,7 @@ import * as actions from '../../actions/thread.js';
 
 import AnswerPost from './Answerpost';
 
-const ModalConductor = props => {
-    console.log(props.currentModal);
-
-    
+const ModalConductor = props => {    
     switch(props.currentModal.payload) {
         case 'answer_post_modal':
             return <AnswerPost {...props}/>
