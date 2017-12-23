@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import * as actions from '../actions/thread';
-
-import ModalConductor from './Modal/ModalConductor';
+import { bindActionCreators } from 'redux';
+import * as threadActionCreators from '../actions/thread';
+import * as modalActionCreators from '../actions/modal';
+import { ANSWER_POST_MODAL } from '../actions/types';
 
 import style from '../../style/components/postThread.css';
 
@@ -32,14 +34,7 @@ class PostThread extends Component {
      * to answer question
      */
     displayAnswerComponent() {
-        this.props.fetchAnswerQuestionModal();
-    }
-
-    /**
-     * Make sure answer component is no longer displayed when component unmounts
-     */
-    componentWillUnmount() {
-        this.props.toggleAnswerComponent(false);
+        this.props.showModal(ANSWER_POST_MODAL);
     }
  
     /**
@@ -101,6 +96,11 @@ class PostThread extends Component {
     }
 }
 
+/**
+ * Take the application state and return is as the components this.props.
+ * When state changes, the component will automatically re-render
+ * @param {*} state The current application state
+ */
 function mapStateToProps(state) {
     return {
         selectedPost: state.post,
@@ -108,5 +108,13 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, actions)(PostThread)
-// export default PostThread
+/**
+ * bind multiple action creators to this component and 
+ * return it as props
+ * @param {*} dispatch 
+ */
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(Object.assign({}, threadActionCreators, modalActionCreators), dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostThread)

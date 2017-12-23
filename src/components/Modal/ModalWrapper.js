@@ -1,27 +1,45 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+
+import { connect } from 'react-redux';
+import * as actions from '../../actions/modal';
 
 import style from '../../../style/components/modal/ModalWrapper.css';
 
-const ModalWrapper = props => {
-    const handleBackgroundClick = e => {
-        if(e.target === e.currentTarget) {
-            console.log('going to hide modal');
-        }
+// const modalRoot = document.getElementById('modal-root');
+
+class ModalWrapper extends Component {
+    constructor(props){
+        super(props);
     }
 
-    return (
-        <div className={style.modalwrapper} onClick={handleBackgroundClick}>
-            <div className={style.modalContent}>
-                {props.children}
+    /**
+     * handle the background click to close the modal
+     */
+    handleBackgroundClick(e) {
+        if(e.target == e.currentTarget) {
+            this.props.hideModal();
+        }
+    }
+ 
+    render() {
+        return (
+            <div className={style.modalwrapper} onClick={this.handleBackgroundClick.bind(this)} id="modal_wrapper">
+                <div>
+                
+                </div>
+                <div className={style.modalContent}>
+                    {this.props.children}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
-ModalWrapper.PropTypes = {
-    width: PropTypes.number,
-    length: PropTypes.number
-}
+// ModalWrapper.PropTypes = {
+//     width: PropTypes.number,
+//     length: PropTypes.number
+// }
 
-export default ModalWrapper
+export default connect(null, actions)(ModalWrapper)

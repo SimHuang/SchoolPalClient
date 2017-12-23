@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import style from '../../../style/components/AnswerPost.css';
 import { connect } from 'react-redux';
+import * as action from '../../actions';
 import classNames from 'classnames';
 
 import ModalWrapper from './ModalWrapper';
@@ -13,7 +14,7 @@ import { Button, Form, TextArea } from 'semantic-ui-react';
 class AnswerPost extends Component {
 
     constructor(props) {
-        super(props);
+        super(props);        
     }
 
     componentWillUnmount() {
@@ -29,7 +30,7 @@ class AnswerPost extends Component {
         );
 
         return (
-            <ModalWrapper {...this.props}>
+            <ModalWrapper {...this.props.modal}>
                 <Form>  
                     <TextArea placeholder="What do you have in mind?" style={{ minHeight: 300, marginBottom: '10px' }}/>
                     <Button className={answerPostClass} role="button" content='Submit Answer'/>
@@ -39,4 +40,10 @@ class AnswerPost extends Component {
     }
 }
 
-export default AnswerPost 
+function mapStateToProps(state) {
+    return {
+        modal: state.modal
+    }
+}
+
+export default connect(mapStateToProps, action)(AnswerPost) 

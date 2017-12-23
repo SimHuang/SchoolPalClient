@@ -13,11 +13,13 @@ export const CREATED_POST = 'create_post';
 export const CREATING_POST = 'creating_post';
 
 /*MODAL ACTION TYPES*/
-export const SHOW_MODAL = 'SHOW_MODAL';
-export const HIDE_MODAL = 'HIDE_MODAL';
+export const SHOW_MODAL = 'show_modal';
+export const HIDE_MODAL = 'hide_modal';
 
 /*SINGLE POST RELATED ACTION TYPES*/
 export const PREPARE_ANSWER = 'prepare_answer';
 export const ANSWER_QUESTION = 'answer_question';
 
+/*DIFFERENT TYPES OF MODAL */
+export const ANSWER_POST_MODAL = 'answer_post_modal';
 

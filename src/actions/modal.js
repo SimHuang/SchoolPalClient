@@ -1,16 +1,26 @@
 import { SHOW_MODAL, HIDE_MODAL } from './types';
+import ReactDOM from 'react-dom';
 
-export const showModal = (types, props) => ({
-    type:SHOW_MODAL,
-    payload: {
-        type,
-        props
-    }
-});
-
-//action to  unmount modal
-export const hideModal = () => {
+/**
+ * This action returns the component that should be rendered
+ * @param {*} modalComponent 
+ */
+export const showModal = (modalComponent) => {
+    console.log('this is the component' + modalComponent);
     return {
-        type: HIDE_MODAL
+        type:SHOW_MODAL,
+        payload: {
+            modal: modalComponent
+        }
+    }
+};
+
+//amount the component that is passed in 
+export const hideModal = (component) => {
+    return {
+        type: HIDE_MODAL,
+        payload: {
+            modal: null
+        }
     }
 }

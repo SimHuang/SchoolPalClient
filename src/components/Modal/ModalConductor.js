@@ -5,13 +5,12 @@ import * as actions from '../../actions/thread.js';
 import AnswerPost from './Answerpost';
 
 const ModalConductor = props => {
+    console.log(props.currentModal);
+
     
-    switch(props.currentModal) {
-        case 'SHOW_MODAL':
+    switch(props.currentModal.payload) {
+        case 'answer_post_modal':
             return <AnswerPost {...props}/>
-        
-        case 'HIDE_MODAL': 
-            return null;
         
         default:
             return null;
