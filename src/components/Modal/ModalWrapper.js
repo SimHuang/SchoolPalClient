@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/modal';
 
+import { Icon, Button } from 'semantic-ui-react';
 import style from '../../../style/components/modal/ModalWrapper.css';
 
 // const modalRoot = document.getElementById('modal-root');
@@ -22,14 +23,18 @@ class ModalWrapper extends Component {
             this.props.hideModal();
         }
     }
+
+    closeModal() {
+        this.props.hideModal();
+    }
  
     render() {
         return (
             <div className={style.modalwrapper} onClick={this.handleBackgroundClick.bind(this)} id="modal_wrapper">
-                <div>
-                
-                </div>
                 <div className={style.modalContent}>
+                    <div className={style.modalHeader}>
+                        <Icon name='x' color='grey' onClick={this.closeModal.bind(this)}/>
+                    </div>
                     {this.props.children}
                 </div>
             </div>

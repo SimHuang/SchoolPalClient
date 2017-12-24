@@ -28,7 +28,7 @@ class AnswerPost extends Component {
         return (
             <ModalWrapper {...this.props.modal}>
                 <Form>  
-                    <TextArea placeholder="What do you have in mind?" style={{ minHeight: 300, marginBottom: '10px' }}/>
+                    <TextArea placeholder="What do you have in mind?" style={{ minHeight: 310, marginBottom: '10px', resize: 'none' }}/>
                     <Button className={answerPostClass} role="button" content='Submit Answer'/>
                 </Form>
             </ModalWrapper>

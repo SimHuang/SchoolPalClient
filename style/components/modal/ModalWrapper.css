@@ -15,8 +15,17 @@
     background-color: #fefefe;
     margin: 100px auto;
     padding: 20px;
-    height: 400px;
+    height: 430px;
     width: 600px;
     border-radius: 3px;
     border: 1px solid #888;
+}
+
+.modalHeader {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.modalHeader i {
+    cursor: pointer;
 }
