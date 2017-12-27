@@ -13,13 +13,12 @@
 }
 
 .metaContainer {
-    margin: 5px 10px 0 10px;
-    padding-bottom: 5px;
+    margin: 5px 10px 0 10px;    
     border-bottom: 1px solid #D7DEDA;
 }
 
 .username {
-    color: #2857AF;
+    color: #8796b3;
     font-weight: bold;
 }
 
@@ -28,7 +27,8 @@
     width: 775px;
     margin: 0 10px 3px 9px;
     padding: 10px 0;
-    color: #172631;
+    color: #0a59a7;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -37,13 +37,16 @@
 }
 
 .meta {
-    border: 1px solid #2b6dad;
+    border: 1px solid #f1f8fb;
     border-radius: 2px;
     color: #2b6dad;
     background: #f1f8fb;
-    padding: 4px;
+    padding: 2px;
     font-size: 12px;
     margin-right: 5px;
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
 }
 
 .metaAction {
