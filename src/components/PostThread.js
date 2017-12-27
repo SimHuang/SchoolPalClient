@@ -27,6 +27,7 @@ class PostThread extends Component {
     componentWillMount() {
         let id = this.props.match.params.id;
         this.props.fetchSpecificPost(id);
+        window.scroll(0,0);
     }
 
     /**
