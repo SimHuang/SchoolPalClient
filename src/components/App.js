@@ -12,7 +12,11 @@ import ModalConductor from '../components/Modal/ModalConductor';
 
 
 const App = () => {
-    return (
+
+    //clear local storage of any user data once the root App component loads
+    localStorage.clear();
+
+     return (
         <div>
             {/*THE REST OF THE APPLICATION STORED UNDER REACT ROUTER*/}
             <BrowserRouter>
