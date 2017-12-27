@@ -24,26 +24,6 @@ export function fetchPost() {
     }
 }
 
-// /**
-//  * fetch single post base on post id
-//  */
-// export function fetchSpecificPost(id) {
-//     let token = localStorage.getItem('token');
-//     return function(dispatch) {
-//         axios.get(`${ROOT_URL}/api/v1/post/${id}`, {
-//             headers: {
-//                 'Authorization': token
-//             }
-//         })
-//         .then(response => {
-//             dispatch({type: FETCH_POST, response: response.data});
-//         })
-//         .catch(error => {
-//             console.log(error);
-//         });
-//     }
-// }
-
 /**
  * create a post
  */

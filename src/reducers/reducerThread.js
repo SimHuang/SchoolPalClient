@@ -1,4 +1,4 @@
-import { PREPARE_ANSWER, ANSWER_QUESTION } from '../actions/types';
+import { ANSWERED_THREAD, ANSWERING_THREAD } from '../actions/types';
 
 let initialState = {
     answer: false
@@ -6,10 +6,10 @@ let initialState = {
 
 export default function(state=initialState, action) {
     switch(action.type) {
-        case PREPARE_ANSWER: 
+        case ANSWERED_THREAD: 
             return {...state, answer: action.payload}
         
-        case ANSWER_QUESTION: 
+        case ANSWERING_THREAD: 
             return {...state, currentModal: action.payload}
 
         default:

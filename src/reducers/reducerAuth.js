@@ -8,7 +8,7 @@ export default function(state = {}, action) {
             return {...state, error: action.response, authenticated: false};
             // return Object.assign({}, state, {error: 'Error creating account'});
         case UNAUTH_USER:
-            return {...state, message: 'user logged out', authenticated:false};
+            return { message: 'user logged out', authenticated:false};
         default: 
             return state;
     }

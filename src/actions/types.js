@@ -16,9 +16,9 @@ export const CREATING_POST = 'creating_post';
 export const SHOW_MODAL = 'show_modal';
 export const HIDE_MODAL = 'hide_modal';
 
-/*SINGLE POST RELATED ACTION TYPES*/
-export const PREPARE_ANSWER = 'prepare_answer';
-export const ANSWER_QUESTION = 'answer_question';
+// /*SINGLE POST RELATED ACTION TYPES*/
+export const ANSWERING_THREAD = 'answer_question';
+export const ANSWERED_THREAD = 'answered_thread';
 
 /*DIFFERENT TYPES OF MODAL */
 export const ANSWER_POST_MODAL = 'answer_post_modal';

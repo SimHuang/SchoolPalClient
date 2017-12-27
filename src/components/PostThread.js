@@ -69,6 +69,7 @@ class PostThread extends Component {
 
     render() {
         //return loading if data is not returned
+        //this is usually because user is not logged in
         if(!this.props.selectedPost.selected) {
             return (
                 <div className={style.postThreadContainer}>
@@ -106,7 +107,6 @@ class PostThread extends Component {
 /**
  * Take the application state and return is as the components this.props.
  * When state changes, the component will automatically re-render
- * @param {*} state The current application state
  */
 function mapStateToProps(state) {
     return {
@@ -118,7 +118,6 @@ function mapStateToProps(state) {
 /**
  * bind multiple action creators to this component and 
  * return it as props
- * @param {*} dispatch 
  */
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(Object.assign({}, threadActionCreators, modalActionCreators), dispatch);

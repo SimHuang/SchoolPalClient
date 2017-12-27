@@ -2,11 +2,17 @@
 import axios from 'axios';
 import ReactDOM from 'react-dom';
 
-import {FETCH_POST, PREPARE_ANSWER, ANSWER_QUESTION, SHOW_MODAL, HIDE_MODAL} from './types';
+import {FETCH_POST, 
+        PREPARE_ANSWER, 
+        SHOW_MODAL, 
+        HIDE_MODAL,
+        ANSWERING_THREAD,
+        ANSWERED_THREAD} from './types';
 import {ROOT_URL} from '../../config.js';
 
 /**
  * action creator to display the answer post component
+ * deprecated
  */
 export function toggleAnswerComponent(status) {
     return {
@@ -14,6 +20,32 @@ export function toggleAnswerComponent(status) {
         payload: {
             toAnswer: status
         }
+    }
+}
+
+/**
+ * The action creater that is called when user answers a question.
+ * The user must be logged in.
+ */
+export function postAnswerForThread(content, callback) {
+    let token = localStorage.getItem('token');
+    return function(dispatch) {
+        dispatch({type: ANSWERING_THREAD});
+        axios({
+            method: 'post',
+            url: `${ROOT_URL}/api/v1/post/answer`,
+            data: content,
+            headers: {
+                'Authorization': token,
+                'content-type': 'application/json'
+            }
+        })
+        .then(response => {
+            callback(); //this callback should close the modal
+        })
+        .catch(error => {
+            console.log(error);
+        });
     }
 }
 

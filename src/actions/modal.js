@@ -15,7 +15,7 @@ export const showModal = (modalComponent) => {
 };
 
 //amount the component that is passed in 
-export const hideModal = (component) => {
+export const hideModal = () => {
     return {
         type: HIDE_MODAL,
         payload: {
