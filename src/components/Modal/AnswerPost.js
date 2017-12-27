@@ -35,6 +35,7 @@ class AnswerPost extends Component {
      * Calls action creator to post a new answer for a question
      */
     answerPost(values) {
+        console.log(this.props);
         let postId = window.location.pathname.split('/')[2];
         let answer = values.answerTextArea;
         this.props.postAnswerForThread({
@@ -57,12 +58,18 @@ class AnswerPost extends Component {
             style.custom,
         );
 
+        //determine the submit button
+        let submitButton = this.props.thread.isAnswering ? 
+            <Button primary loading disabled className={answerPostClass} role="button" content='Submit Answer' type='submit'/> :
+            <Button className={answerPostClass} role="button" content='Submit Answer' type='submit'/>
+
         return (
             <ModalWrapper {...this.props.modal}>
                 <Form onSubmit={handleSubmit(this.answerPost)}>  
                     {/* <TextArea placeholder="What do you have in mind?" style={{ minHeight: 310, marginBottom: '10px', resize: 'none' }}/> */}
                     <Field name="answerTextArea" component={semanticReduxFormTextArea} />
-                    <Button className={answerPostClass} role="button" content='Submit Answer' type='submit'/>
+                    {/* <Button className={answerPostClass} role="button" content='Submit Answer' type='submit'/> */}
+                    {submitButton}
                 </Form>
             </ModalWrapper>
         )
@@ -71,6 +78,7 @@ class AnswerPost extends Component {
 
 function mapStateToProps(state) {
     return {
+        thread: state.thread,
         modal: state.modal
     }
 }

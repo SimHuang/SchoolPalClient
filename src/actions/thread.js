@@ -10,6 +10,9 @@ import {FETCH_POST,
         ANSWERED_THREAD} from './types';
 import {ROOT_URL} from '../../config.js';
 
+//THIS FILE CONTAINS ALL THE ACTION CREATORS FOR A THREAD COMPONENT
+// E.G: ANSWER, FETCH SINGLE POST, LIKE, ETC.
+
 /**
  * action creator to display the answer post component
  * deprecated
@@ -30,7 +33,7 @@ export function toggleAnswerComponent(status) {
 export function postAnswerForThread(content, callback) {
     let token = localStorage.getItem('token');
     return function(dispatch) {
-        dispatch({type: ANSWERING_THREAD});
+        dispatch({type: ANSWERING_THREAD, payload: {isAnswering: true}});
         axios({
             method: 'post',
             url: `${ROOT_URL}/api/v1/post/answer`,
@@ -41,10 +44,12 @@ export function postAnswerForThread(content, callback) {
             }
         })
         .then(response => {
+            dispatch({type: ANSWERED_THREAD, payload: {isAnswering: false}})
             callback(); //this callback should close the modal
         })
         .catch(error => {
             console.log(error);
+            dispatch({type: ANSWERED_THREAD, payload: {isAnswering: false}})
         });
     }
 }
