@@ -7,7 +7,8 @@ export const SIGN_UP = 'sign_up';
 /*POST RELATED ACTION TYPES */
 export const FETCH_POSTS = 'fetch_posts';
 export const FETCHING_POSTS = 'fetching_post';
-export const FETCH_POST = 'fetch_post';
+export const FETCHING_SINGLE_POST = 'fetching_single_post';
+export const FETCHED_SINGLE_POST = 'fetched_single_post';
 
 export const CREATED_POST = 'create_post';
 export const CREATING_POST = 'creating_post';

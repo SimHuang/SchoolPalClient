@@ -1,16 +1,23 @@
 import { FETCH_POSTS,
          CREATED_POST,
-         FETCH_POST } from '../actions/types';
+         FETCHED_SINGLE_POST,
+         FETCHING_SINGLE_POST } from '../actions/types';
 
-export default function(state={}, action) {
+let initialState = {
+    isLoadingPost: true,
+    selected: null
+}
+
+export default function(state=initialState, action) {
     switch(action.type) {
         case FETCH_POSTS:
             return {...state, posts:action.response}
 
-        case FETCH_POST: 
-            //give up the state of all posts it is not needed
-            return {selected:action.response};
-            // return { ...state, selected: action.response}
+        case FETCHED_SINGLE_POST: 
+            return {...state, selected:action.response, isLoadingPost: action.isLoadingPost};
+        
+        case FETCHING_SINGLE_POST: 
+            return {...state, isLoadingPost: true}
         
         case CREATED_POST:
             return {...state};

@@ -2,7 +2,8 @@
 import axios from 'axios';
 import ReactDOM from 'react-dom';
 
-import {FETCH_POST, 
+import {FETCHED_SINGLE_POST, 
+        FETCHING_SINGLE_POST,
         PREPARE_ANSWER, 
         SHOW_MODAL, 
         HIDE_MODAL,
@@ -58,15 +59,21 @@ export function postAnswerForThread(content, callback) {
  * fetch single post base on post id
  */
 export function fetchSpecificPost(id) {
-    let token = localStorage.getItem('token');
     return function(dispatch) {
+        dispatch({type: FETCHING_SINGLE_POST, isLoadingPost: true});
+        let token = localStorage.getItem('token');
         axios.get(`${ROOT_URL}/api/v1/post/${id}`, {
             headers: {
                 'Authorization': token
             }
         })
         .then(response => {
-            dispatch({type: FETCH_POST, response: response.data});
+            dispatch(
+                {
+                    type: FETCHED_SINGLE_POST, 
+                    response: response.data,
+                    isLoadingPost: false
+                });
         })
         .catch(error => {
             console.log(error);

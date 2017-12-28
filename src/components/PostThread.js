@@ -6,6 +6,7 @@ import * as threadActionCreators from '../actions/thread';
 import * as modalActionCreators from '../actions/modal';
 import { ANSWER_POST_MODAL } from '../actions/types';
 
+import { Loader } from 'semantic-ui-react';
 import style from '../../style/components/postThread.css';
 
 /**
@@ -29,6 +30,7 @@ class PostThread extends Component {
         this.props.fetchSpecificPost(id);
         window.scroll(0,0);
     }
+
 
     /**
      * Make sure all modals are unmounted when the parent component unmounts
@@ -70,11 +72,10 @@ class PostThread extends Component {
 
     render() {
         //return loading if data is not returned
-        //this is usually because user is not logged in
-        if(!this.props.selectedPost.selected) {
+        if(this.props.selectedPost.isLoadingPost) {
             return (
                 <div className={style.postThreadContainer}>
-                    <div>loading...</div>
+                    <Loader active inline="centered" className={style.threadLoader}>Loading</Loader>
                 </div>
             )
         }

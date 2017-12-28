@@ -73,3 +73,7 @@
     height: 40px;
     cursor: pointer;
 }
+
+.threadLoader {
+    margin-top: 200px;
+}
