@@ -30,6 +30,11 @@ class Post extends Component {
         }
     }
 
+    //decrease the numnber of votes on user click
+    onDownvoteClick() {
+
+    }
+
     render() {
         let parsedDate = this.parseDate();
 
@@ -54,7 +59,7 @@ class Post extends Component {
                     <span className={style.meta}>Views {this.props.views}</span>
                     <span className={style.meta}>Answers {this.props.answers}</span>
                     <span className={style.metaAction}>Follow</span>
-                    <span className={style.metaAction}>Downvote</span>
+                    <span className={style.metaAction} onClick={this.onDownvoteClick.bind(this)}>Downvote</span>
                 </div>
             </div>
         )

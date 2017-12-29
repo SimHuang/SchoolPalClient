@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as threadActionCreators from '../actions/thread';
 import * as modalActionCreators from '../actions/modal';
 import { ANSWER_POST_MODAL } from '../actions/types';
+import Answer from './Answer';
 
 import { Loader } from 'semantic-ui-react';
 import style from '../../style/components/postThread.css';
@@ -61,13 +62,9 @@ class PostThread extends Component {
 
         return postAnswers.map((value, index) => {
             return (
-                <div className={style.answerContainer} key={index}>
-                    <div className={style.meta}>{value.user}</div>
-                    <div className={style.meta}>{this.parseDate(value.date)}</div>
-                    <div className={style.answer}>{value.answer}</div>
-                </div>
+                <Answer key={index} date={this.parseDate(value.date)} answer={value.answer} user={value.user}/>
             )
-        })
+        });
     }
 
     render() {
