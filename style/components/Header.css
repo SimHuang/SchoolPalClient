@@ -42,8 +42,12 @@ body {
     position: relative;
 }
 
+.links div{
+    width: max-content;
+}
+
 .links a {
-    color: #a1a2a5;
+    color: #0366D6;
     margin-right: 17px;
     transition: color .5s;
 }
@@ -123,4 +127,7 @@ body {
     background: #1F457D;
 }
 
+.icon {
+    display: inline;
+}
 

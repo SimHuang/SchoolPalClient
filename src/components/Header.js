@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import { connect } from 'react-redux';
-
 import * as actions from '../actions/auth';
+
 import style from '../../style/components/Header.css';
+import { Icon } from 'semantic-ui-react';
 
 class Header extends Component {
     constructor(props) {
@@ -43,8 +43,8 @@ class Header extends Component {
                 <div className={style.linkContainer}>
                     <div className={style.links}>
                         <div>
-                            <Link to="/">Home</Link>
-                            <Link to="/">Questions</Link>
+                            <Link to="/"><Icon name='home' size='large' className={style.icon}/>Home</Link>
+                            <Link to="/"><Icon name='feed' size='large' className={style.icon}/>Feed</Link>
                             {/*<Link to="/">News</Link>*/}
                             {/* <Link to="/">Jobs</Link> */}
                             {/*<Link to="/">Resource</Link>*/}
