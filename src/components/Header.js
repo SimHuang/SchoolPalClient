@@ -44,7 +44,7 @@ class Header extends Component {
                     <div className={style.links}>
                         <div>
                             <Link to="/"><Icon name='home' size='large' className={style.icon}/>Home</Link>
-                            <Link to="/"><Icon name='feed' size='large' className={style.icon}/>Feed</Link>
+                            <Link to="/feed"><Icon name='feed' size='large' className={style.icon}/>Feed</Link>
                             {/*<Link to="/">News</Link>*/}
                             {/* <Link to="/">Jobs</Link> */}
                             {/*<Link to="/">Resource</Link>*/}
