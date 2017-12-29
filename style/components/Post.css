@@ -7,14 +7,14 @@
     margin-left: auto;
     margin-right: auto;
     background: #fff;
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 12px;
 }
 
 .metaContainer {
-    margin: 5px 10px 0 10px;    
-    border-bottom: 1px solid #D7DEDA;
+    /* margin: 5px 10px 0 10px;     */
+    background: #f5f9fb;
+    padding: 5px;
+    border-bottom: 1px solid #d4d4d5;
 }
 
 .username {
@@ -30,6 +30,10 @@
     color: #0a59a7;
     font-size: 15px;
     font-weight: bold;
+}
+
+.postContainer:hover {
+    color: #8796b3;
 }
 
 .upvoteContainer {
@@ -54,6 +58,7 @@
     margin-left: 5px;
     margin-right: 2px;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .metaAction:hover {
