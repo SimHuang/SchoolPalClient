@@ -7,7 +7,7 @@ import { Field, reduxForm } from 'redux-form';
 class CreatePost extends Component {
 
     cancelPost() {
-        
+        this.props.history.push('/');
     }
 
     submitPost(values) {
@@ -51,7 +51,7 @@ class CreatePost extends Component {
                         <br />
                         <br />
                         <button type="submit" className={style.submitBtn}>Submit</button>
-                        <button className={style.cancelBtn}>Cancel</button>
+                        <a className={style.cancelBtn} onClick={this.cancelPost.bind(this)} >Cancel</a>
                     </form>
                 </div>
             </div>
