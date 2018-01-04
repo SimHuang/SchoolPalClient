@@ -1,0 +1,29 @@
+.navbar {
+    text-decoration: none;
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+
+.navbar li {
+    float: left;
+    padding: 0 3px;
+}
+
+.userSettingIcon {
+    color: #0366D6;
+    cursor: pointer;
+    position: relative;
+}
+
+.userSettingIcon i:hover + .userSettingDropdownList{
+    display: block;
+}
+
+.userSettingDropdownList {
+    position: absolute;
+    z-index: 200;
+    display: none;
+    right: 0;
+    background: #fff;
+}

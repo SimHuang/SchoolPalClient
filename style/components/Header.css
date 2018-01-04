@@ -30,12 +30,9 @@ body {
     width: 800px;
     min-width: 800px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
-
-/*.linkContainer div {
-    display: inline-block;
-    height: 50px;
-}*/
 
 .links {
     display: inline;
@@ -43,7 +40,7 @@ body {
 }
 
 .links div{
-    width: max-content;
+    display: inline-block;
 }
 
 .links a {
@@ -127,7 +124,6 @@ body {
     background: #1F457D;
 }
 
-.icon {
-    display: inline;
-}
+
+
 
