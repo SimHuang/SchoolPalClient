@@ -59,70 +59,12 @@ body {
     top:50%;
 }
 
-.access {
-    float: right;
-}
-
-.access div {
-    display: inline;
-}
-
 .headerContainer a {
     text-decoration: none;
 }
 
-.signin {
-    /*border: 1px solid #28AF67;*/
-    border-radius: 3px;
-    padding: 8px;
-    text-align: center;
-}
-
-.access a {
-    margin-right: 10px;
-}
-
-.signin a {
-    color: #03a87c;
-    margin: auto 0;
-}
-
-.signup a {
-    border: 1px solid #03a87c;
-    border-radius: 3px;
-    padding: 8px;
-    margin-left: 5px;
-    text-align: center;
-    transition: color,background-color;
-    transition-duration: .5s;
-    cursor: pointer;
-    color: #03a87c;
-}
-
-.signup a:hover{
-    background: #03a87c;
-    color: #fff;
-}
 
 
-.newPost {
-    cursor: pointer;
-    color: #fff;
-    padding: 8px;
-}
-
-.newPost a {
-    border: 1px solid #0366D6;
-    border-radius: 2px;
-    padding: 5px;
-    background: #0366D6;
-    color: #fff;
-    transition: background-color .25s;
-}
-
-.newPost a:hover {
-    background: #1F457D;
-}
 
 
 

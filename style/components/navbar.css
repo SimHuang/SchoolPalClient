@@ -10,8 +10,61 @@
     padding: 0 3px;
 }
 
+.signin {
+    /*border: 1px solid #28AF67;*/
+    border-radius: 3px;
+    padding: 8px;
+    text-align: center;
+}
+
+.signin a {
+    color: #03a87c;
+    margin: auto 0;
+}
+
+.signup a {
+    border: 1px solid #03a87c;
+    border-radius: 3px;
+    padding: 8px;
+    margin-left: 5px;
+    text-align: center;
+    transition: color,background-color;
+    transition-duration: .5s;
+    cursor: pointer;
+    color: #03a87c;
+}
+
+.signup a:hover{
+    background: #03a87c;
+    color: #fff;
+}
+
+/************************/
+
+.askQuestion {
+    cursor: pointer;
+    color: #fff;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.askQuestion a {
+    border: 1px solid #0366D6;
+    border-radius: 2px;
+    padding: 5px;
+    background: #0366D6;
+    color: #fff;
+    transition: background-color .25s;
+}
+
+.askQuestion a:hover {
+    background: #1F457D;
+}
+
+
+/*********************/
 .userSettingIcon {
-    color: #0366D6;
+    color: #547294;
     cursor: pointer;
     position: relative;
 }

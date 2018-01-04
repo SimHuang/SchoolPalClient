@@ -33,6 +33,7 @@ class NavBar extends Component {
      */
     handleSignOut() {
         this.props.signOutUser();
+        this.setState({displayUserSettingDropdown: false});
     }
 
     /**
@@ -87,19 +88,19 @@ class NavBar extends Component {
 
     render() {
         let signInLink = !this.props.auth.authenticated ? 
-                        <li>
+                        <li className={navbarStyle.signin}>
                             <Link to="/signin">Sign In</Link>
                         </li> : 
                         undefined;
 
         let signUpLink = !this.props.auth.authenticated ? 
-                        <li>
+                        <li className={navbarStyle.signup}>
                             <Link to="/signup">Sign Up</Link>
                         </li> :
                         undefined;
 
         let answerQuestionLink = this.props.auth.authenticated ? 
-                        <li>
+                        <li className={navbarStyle.askQuestion}>
                             <Link to="/newPost">Ask Question</Link>
                         </li> :
                         undefined;
