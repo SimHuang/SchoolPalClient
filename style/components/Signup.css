@@ -61,6 +61,19 @@ body {
     cursor: pointer;
 }
 
+.message {
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.message span {
+    color: rgb(75, 86, 105);
+    font-size: 12px;
+}   
+
+.message a {
+    font-size: 12px;
+}
+
 .error {
     color: #d47d7d;
     margin-top: 5px;

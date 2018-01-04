@@ -97,6 +97,7 @@ class Signup extends Component {
                         <button className={style.submitBtn} type="submit">Create Account</button>
                         {/* <Link to="/"><button className={style.cancelBtn} >Cancel</button></Link> */}
                     </form>
+                    <div className={style.message}><span>Already Have an account?</span> <Link to="/signin">Log In</Link></div>
                     {errorMessage}
                 </div>
             </div>
