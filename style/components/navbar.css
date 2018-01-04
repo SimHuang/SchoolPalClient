@@ -16,14 +16,37 @@
     position: relative;
 }
 
-.userSettingIcon i:hover + .userSettingDropdownList{
+.userSettingDropdownListShow{
     display: block;
 }
 
-.userSettingDropdownList {
-    position: absolute;
-    z-index: 200;
+.userSettingDropdownListHide {
     display: none;
+}
+
+.userSettingDropdownList {
+    margin-top: 5px;
+    position: absolute;
+    z-index: 1;
     right: 0;
     background: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-size: 12px;
+    border: 1px solid rgba(27,31,35,0.15);
+    border-radius: 3px;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.userSettingDropdownList a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 6px;
+    width: 210px;
+    padding-left: 15px;
+}
+
+.userSettingDropdownList a:hover {
+    background: #365899;
+    color: #fff;
 }

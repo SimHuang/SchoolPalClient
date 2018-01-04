@@ -10,12 +10,6 @@ import { Icon } from 'semantic-ui-react';
 class Header extends Component {
     constructor(props) {
         super(props);
-
-        this.handleSignOut = this.handleSignOut.bind(this);
-    }
-
-    handleSignOut() {
-        this.props.signOutUser();
     }
 
     render() {
