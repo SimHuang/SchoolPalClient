@@ -73,7 +73,7 @@ class NavBar extends Component {
         if(this.props.auth.authenticated) {
             return ( 
                 <li className={navbarStyle.userSettingIcon}>
-                    <Icon id="userSetting" name="user" size="large" onClick={this.setDropDownstate}/>
+                    <Icon id="userSetting" name="user circle" size="big" onClick={this.setDropDownstate}/>
                     <div className={dropdownClass}>
                         <Link to="/"><Icon name="setting" size="large" /> Setting</Link>
                         <Link to="/" onClick={this.handleSignOut}><Icon name="sign out" size="large"/> Sign Out</Link>

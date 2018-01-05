@@ -7,19 +7,23 @@
 
 .navbar li {
     float: left;
-    padding: 0 3px;
 }
 
 .signin {
-    /*border: 1px solid #28AF67;*/
     border-radius: 3px;
-    padding: 8px;
+    padding: 8px 0;
     text-align: center;
 }
 
 .signin a {
     color: #03a87c;
     margin: auto 0;
+}
+
+.signup {
+    border-radius: 3px;
+    padding: 8px 0;
+    text-align: center;
 }
 
 .signup a {
@@ -67,6 +71,7 @@
     color: #547294;
     cursor: pointer;
     position: relative;
+    margin-top: 4px;
 }
 
 .userSettingDropdownListShow{

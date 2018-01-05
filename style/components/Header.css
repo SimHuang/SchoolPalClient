@@ -37,6 +37,7 @@ body {
 .links {
     display: inline;
     position: relative;
+    padding-top: 8px;
 }
 
 .links div{
