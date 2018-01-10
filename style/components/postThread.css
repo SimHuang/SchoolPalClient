@@ -1,9 +1,10 @@
 .postThreadContainer {
     /* position: fixed; */
     /* top: 50px; */
-    margin-top: 60px;
+    padding-top: 60px;
     width: 100%;
     height: 100%;
+    font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .postDetailContainer {
@@ -15,8 +16,7 @@
     margin-top:10px;
     margin-bottom: 20px;
     background:white;
-    padding: 10px 10px 20px 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px 0 10px;
     font-size: 14px;
 }
 
@@ -76,4 +76,23 @@
 
 .threadLoader {
     margin-top: 200px;
+}
+
+.postActionContainer ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.postActionContainer li {
+    display: inline;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 11px;
+    border-radius: 2px;
+    border: 1px solid rgb(106, 155, 210);
+    padding: 3px;
+    color: #fff;
+    background: #bed4ec;
 }

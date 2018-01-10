@@ -15,6 +15,13 @@ import style from '../../style/components/postThread.css';
  */
 class PostThread extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.onUpvoteClick = this.onUpvoteClick.bind(this);
+        this.onBookmarkClick = this.onBookmarkClick.bind(this);
+    }
+
     /**
      * parse date to readable string
      */
@@ -46,6 +53,14 @@ class PostThread extends Component {
      */
     displayAnswerComponent() {
         this.props.showModal(ANSWER_POST_MODAL);
+    }
+
+    onBookmarkClick() {
+        console.log('you just bookmarked the post');
+    }
+
+    onUpvoteClick() {
+        console.log('you just upvoted this post');
     }
  
     /**
@@ -93,6 +108,12 @@ class PostThread extends Component {
                     <div className={style.question}>{selectedPost.question}</div>
                     <div>{selectedPost.post}</div>
                     <div>{selectedPost.tags}</div>
+                    <div className={style.postActionContainer}>
+                        <ul>
+                            <li onClick={this.onUpvoteClick}>Upvote</li>
+                            <li onClick={this.onBookmarkClick}>Bookmark</li>
+                        </ul>
+                    </div>
                 </div>
                 <div className={style.answersContainer}>
                     {this.renderAnswers()}
