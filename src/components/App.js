@@ -2,11 +2,13 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Main from './Main';
+import Home from './Home';
 import SignIn from './Authentication/Signin';
 import Signup from './Authentication/Signup';
 import Header from './Header';
 import CreatePost from './CreatePost';
 import PostThread from './PostThread';
+import Bookmark from './Bookmark';
 
 import ModalConductor from '../components/Modal/ModalConductor';
 
@@ -27,7 +29,9 @@ const App = () => {
                     <Route path="/signin" component={SignIn} />
                     <Route path="/signup" component={Signup} />
                     <Route path="/newpost" component={CreatePost} />
-                    <Route path="/" component={Main} />
+                    <Route path="/bookmark" component={Bookmark} />
+                    <Route path="/feed" component={Main} />
+                    <Route path="/" component={Home} />
                 </Switch>
                 </div>
             </BrowserRouter>
