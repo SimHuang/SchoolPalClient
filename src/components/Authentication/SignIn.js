@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { Redirect } from 'react-router';
 
 import * as actions from '../../actions/auth';
+import * as modalActionCreators from '../../actions/modal';
 import style from '../../../style/components/SignIn.css'
+import { Checkbox } from 'semantic-ui-react';
 
 
 class SignIn extends Component {
@@ -19,7 +23,21 @@ class SignIn extends Component {
      */ 
     handleSignIn(values) {
         this.props.signInUser(values, () => {
-            this.props.history.push('/');
+            this.props.hideModal(); //hide props if any exist
+            let url = window.location.pathname;
+            
+            //standard login
+            if(url === '/signin') {
+                this.props.history.push('/');
+            
+            //if user is signing in from a specific post
+            }else {
+                let postId = window.location.pathname.split('/')[2];
+                this.props.fetchSpecificPost(postId);
+                return (
+                    <Redirect to={window.location.pathname}/>
+                )
+            }
         })
     }
 
@@ -85,9 +103,12 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(Object.assign({}, actions, modalActionCreators), dispatch);
+}
 const signInForm = reduxForm({
     form: 'signIn',
     validate
 })(SignIn)
 
-export default connect(mapStateToProps, actions)(signInForm);
+export default connect(mapStateToProps, mapDispatchToProps)(signInForm);

@@ -8,8 +8,11 @@ import {FETCHED_SINGLE_POST,
         SHOW_MODAL, 
         HIDE_MODAL,
         ANSWERING_THREAD,
-        ANSWERED_THREAD} from './types';
+        ANSWERED_THREAD,
+        SIGN_IN_MODAL,
+        FETCH_SINGLE_POST_FAILED} from './types';
 import {ROOT_URL} from '../../config.js';
+import { showModal } from './modal';
 
 //THIS FILE CONTAINS ALL THE ACTION CREATORS FOR A THREAD COMPONENT
 // E.G: ANSWER, FETCH SINGLE POST, LIKE, ETC.
@@ -77,6 +80,8 @@ export function fetchSpecificPost(id) {
         })
         .catch(error => {
             console.log(error);
+            // dispatch({type:FETCH_SINGLE_POST_FAILED, isLoadingPost:false});
+            dispatch(showModal(SIGN_IN_MODAL));
         });
     }
 }

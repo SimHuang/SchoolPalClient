@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Main from './Main';
-import Home from './Home';
+// import Home from './Home';
 import SignIn from './Authentication/Signin';
 import Signup from './Authentication/Signup';
 import Header from './Header';
@@ -31,7 +31,7 @@ const App = () => {
                     <Route path="/newpost" component={CreatePost} />
                     <Route path="/bookmark" component={Bookmark} />
                     <Route path="/feed" component={Main} />
-                    <Route path="/" component={Home} />
+                    <Route path="/" component={Main} />
                 </Switch>
                 </div>
             </BrowserRouter>

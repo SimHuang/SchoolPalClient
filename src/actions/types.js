@@ -9,6 +9,7 @@ export const FETCH_POSTS = 'fetch_posts';
 export const FETCHING_POSTS = 'fetching_post';
 export const FETCHING_SINGLE_POST = 'fetching_single_post';
 export const FETCHED_SINGLE_POST = 'fetched_single_post';
+export const FETCH_SINGLE_POST_FAILED = 'fetch_single_post_fail';
 
 export const CREATED_POST = 'create_post';
 export const CREATING_POST = 'creating_post';
@@ -23,4 +24,5 @@ export const ANSWERED_THREAD = 'answered_thread';
 
 /*DIFFERENT TYPES OF MODAL */
 export const ANSWER_POST_MODAL = 'answer_post_modal';
+export const SIGN_IN_MODAL = 'sign_in_modal';
 

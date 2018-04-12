@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import { Input } from 'semantic-ui-react';
-import style from '../../style/components/home.css';
+import { Icon } from 'semantic-ui-react';
 
-class Home extends Component {
+class Search extends Component {
+
     render() {
         return (
             <div className={style.homeContainer}>
@@ -18,6 +18,7 @@ class Home extends Component {
             </div>
         )
     }
+
 }
 
-export default Home
+export default Search
