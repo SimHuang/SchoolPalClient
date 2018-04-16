@@ -9,6 +9,7 @@ import Header from './Header';
 import CreatePost from './CreatePost';
 import PostThread from './PostThread';
 import Bookmark from './Bookmark';
+import UserSetting from './UserSetting';
 
 import ModalConductor from '../components/Modal/ModalConductor';
 
@@ -30,6 +31,7 @@ const App = () => {
                     <Route path="/signup" component={Signup} />
                     <Route path="/newpost" component={CreatePost} />
                     <Route path="/bookmark" component={Bookmark} />
+                    <Route path="/setting" component={UserSetting} />
                     <Route path="/feed" component={Main} />
                     <Route path="/" component={Main} />
                 </Switch>

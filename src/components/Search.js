@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
 
 import { Icon } from 'semantic-ui-react';
+import styles from '../../style/components/search.css';
 
 class Search extends Component {
 
     render() {
         return (
-            <div className={style.homeContainer}>
-                <div className={style.homeSearchContainer}>
-                    <div className={style.searchContainer}>
-                        <Input className={style.search} size='big' icon='search' placeholder='Search...'/>
-                    </div>
-                </div>
-                <div className={style.newFeedContainer}>
-                    new feeds
-                </div>
+            <div className={styles.searchContainer}>
+                <input className={styles.searchBarInput} type="text" placeholder="Search School"/>
+                <input className={styles.searchButtonInput} type="button" value="Search"/>
             </div>
         )
     }
-
 }
 
 export default Search

@@ -76,7 +76,7 @@ class NavBar extends Component {
                     <Icon id="userSetting" name="user circle" size="big" onClick={this.setDropDownstate}/>
                     <div className={dropdownClass}>
                         <Link to="/bookmark"><Icon name="bookmark" size="large" /> Bookmarks</Link>
-                        <Link to="/"><Icon name="setting" size="large" /> Setting</Link>
+                        <Link to="/setting"><Icon name="setting" size="large" /> Setting</Link>
                         <Link to="/" onClick={this.handleSignOut}><Icon name="sign out" size="large"/> Sign Out</Link>
                     </div>
                 </li>

@@ -26,3 +26,8 @@ export const ANSWERED_THREAD = 'answered_thread';
 export const ANSWER_POST_MODAL = 'answer_post_modal';
 export const SIGN_IN_MODAL = 'sign_in_modal';
 
+/*DIFFERENT DATA PERTAINING TO A USER */
+export const FETCH_SETTING = 'fetch_setting';
+export const FETCHING_SETTING = 'fetching_setting';
+export const FETCHED_SETTING = 'fetched_setting';
+
