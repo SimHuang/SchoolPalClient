@@ -31,7 +31,6 @@ export function signInUser({username, password}, callback) {
             password
         })
         .then(response => {
-            console.log(response);
             dispatch({type:AUTH_USER});
             localStorage.setItem('token',response.data.token);
             callback();

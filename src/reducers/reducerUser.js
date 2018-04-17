@@ -3,7 +3,11 @@ import {
     FETCHED_SETTING
 } from '../actions/types.js';
 
-export default function(state={}, action) {
+let initialState = {
+    isFetchingSetting: true
+}
+
+export default function(state=initialState, action) {
     switch(action.type) {
         case FETCHING_SETTING:
             return {...state, isFetchingSetting: true };

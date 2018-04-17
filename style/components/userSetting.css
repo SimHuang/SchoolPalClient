@@ -8,3 +8,58 @@
     background: #fff;
     padding: 20px;
 }
+
+.profileLabel {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profileInput {
+    width: 440px;
+    padding: 10px 5px;
+    max-width: 100%;
+    background: #fafbfc;
+    margin-top: 5px;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    outline: none;
+    vertical-align: middle;
+}
+
+.profileInput:focus {
+    border-color: rgb(62, 138, 224);
+}
+
+.profileTextArea {
+    width: 440px;
+    padding: 10px 5px;
+    height: 160px;
+    max-width: 100%;
+    background: #fafbfc;
+    margin-top: 5px;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    outline: none;
+    vertical-align: middle;
+}
+
+.profileTextArea:focus {
+    border-color: rgb(62, 138, 224);
+}
+
+.settingButton {
+    background: #0cc537;
+    color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    font-size: 14px;
+    vertical-align: middle;
+    padding: 11px 22px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+
+.settingButton:hover {
+    background: #09aa2f;
+}

@@ -38,7 +38,7 @@ export function retrieveUserSetting() {
         })
         .catch(error => {
             //diaplay modal if error retrieving data
-            console.log(error);
+            console.log(error.status);
             // dispatch(showModal(SIGN_IN_MODAL));
         });
     }
