@@ -31,3 +31,6 @@ export const FETCH_SETTING = 'fetch_setting';
 export const FETCHING_SETTING = 'fetching_setting';
 export const FETCHED_SETTING = 'fetched_setting';
 
+/*UPVOTING A POST */
+export const UPVOTE_POST = 'upvote_post';
+export const UPVOTED_POST = 'upvoted_post';

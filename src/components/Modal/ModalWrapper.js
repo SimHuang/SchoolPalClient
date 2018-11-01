@@ -20,7 +20,9 @@ class ModalWrapper extends Component {
      */
     handleBackgroundClick(e) {
         if(e.target == e.currentTarget) {
-            this.props.hideModal();
+            if(this.props.canHide) {
+                this.props.hideModal();
+            }
         }
     }
 

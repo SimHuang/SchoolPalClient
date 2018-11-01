@@ -10,6 +10,8 @@ import {FETCHED_SINGLE_POST,
         ANSWERING_THREAD,
         ANSWERED_THREAD,
         SIGN_IN_MODAL,
+        UPVOTE_POST, 
+        UPVOTED_POST,
         FETCH_SINGLE_POST_FAILED} from './types';
 import {ROOT_URL} from '../../config.js';
 import { showModal } from './modal';
@@ -86,3 +88,20 @@ export function fetchSpecificPost(id) {
     }
 }
 
+export const upvotePost = (id) => {
+    return (dispatch) => {
+        // dispatch({type: UPVOTE_POST});
+        const token = localStorage.getItem('token');
+        axios.put(`${ROOT_URL}/api/v1/post/meta/${id}/upvote`, {
+            headers: {
+                'Authorization': token
+            }
+        })
+        .then(response => {
+            dispatch({type: UPVOTED_POST, payload: response});
+        })
+        .catch(error => {
+            console.log('error');
+        })
+    }
+}

@@ -9,7 +9,7 @@ class LogInModal extends Component {
 
     render() {
         return (
-            <ModalWrapper>
+            <ModalWrapper canHide={false}>
                 <SignIn className={style.signInContainer} {...this.props}/>
                 {/* <div>log in first</div> */}
             </ModalWrapper>

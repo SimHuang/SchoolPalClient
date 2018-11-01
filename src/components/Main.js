@@ -26,7 +26,7 @@ class Main extends Component {
                         date={post.date} 
                         school={post.school} 
                         post={post.post} 
-                        upvote={post.upvotes}
+                        upvote={post.meta.votes}
                         question={post.question}/>
                 // </Link>
             );

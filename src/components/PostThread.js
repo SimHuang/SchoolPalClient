@@ -61,6 +61,8 @@ class PostThread extends Component {
 
     onUpvoteClick() {
         console.log('you just upvoted this post');
+        let id = this.props.match.params.id;
+        this.props.upvotePost(id);
     }
  
     /**

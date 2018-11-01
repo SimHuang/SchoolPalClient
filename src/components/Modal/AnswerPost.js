@@ -64,7 +64,7 @@ class AnswerPost extends Component {
             <Button className={answerPostClass} role="button" content='Submit Answer' type='submit'/>
 
         return (
-            <ModalWrapper {...this.props.modal}>
+            <ModalWrapper {...this.props.modal} canHide={true}>
                 <Form onSubmit={handleSubmit(this.answerPost)}>  
                     {/* <TextArea placeholder="What do you have in mind?" style={{ minHeight: 310, marginBottom: '10px', resize: 'none' }}/> */}
                     <Field name="answerTextArea" component={semanticReduxFormTextArea} />
