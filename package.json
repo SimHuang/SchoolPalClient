@@ -9,6 +9,7 @@
   "author": "Simon Huang",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^3.6.2",
     "axios": "^0.16.2",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",

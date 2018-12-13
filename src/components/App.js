@@ -12,6 +12,9 @@ import Bookmark from './Bookmark';
 import UserSetting from './UserSetting';
 
 import ModalConductor from '../components/Modal/ModalConductor';
+import { signInWrapper } from './HOC/SignInHOC';
+
+const SignInComponent =signInWrapper(SignIn);
 
 
 const App = () => {
@@ -27,7 +30,7 @@ const App = () => {
                 <Header />
                 <Switch>
                     <Route path="/post/:id" component={PostThread}/>
-                    <Route path="/signin" component={SignIn} />
+                    <Route path="/signin" component={SignInComponent} />
                     <Route path="/signup" component={Signup} />
                     <Route path="/newpost" component={CreatePost} />
                     <Route path="/bookmark" component={Bookmark} />

@@ -49,8 +49,8 @@ class SignIn extends Component {
         }
 
         return( 
-            <div className={style.mainContainer}>
-                <div>
+            // <div className={style.mainContainer}>
+                <div className={style.mainContainer}>
                     <h3>Sign In</h3>
                     <form onSubmit={handleSubmit(this.handleSignIn)}>
                         <Field name="username" component={renderFields} type="username" label="Email"/>
@@ -64,7 +64,7 @@ class SignIn extends Component {
                     </form>
                 </div>
                 
-            </div>
+            //{/* </div> */}
         );
     }
 }
