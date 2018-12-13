@@ -10,7 +10,7 @@ export function signInWrapper(WrappedComponent, data) {
     render() {
       return (
         <div className={styles.wrapperContainer}>
-          <WrappedComponent />
+          <WrappedComponent history={this.props.history}/>
         </div>
       );
     }

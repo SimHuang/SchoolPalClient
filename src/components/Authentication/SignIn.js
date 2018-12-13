@@ -28,6 +28,7 @@ class SignIn extends Component {
             
             //standard login
             if(url === '/signin') {
+                console.log(this.props);
                 this.props.history.push('/');
             
             //if user is signing in from a specific post
